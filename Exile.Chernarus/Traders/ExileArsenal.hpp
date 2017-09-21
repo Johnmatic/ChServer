@@ -534,7 +534,7 @@ class CfgExileArsenal
 	class 7Rnd_408_Mag										{ quality = 3; price = 100; };
 	class 10Rnd_127x54_Mag									{ quality = 3; price = 150; };
 	class 5Rnd_127x108_Mag									{ quality = 3; price = 100; };
-	class 5Rnd_127x108_APDS_Mag								{ quality = 3; price = 500; sellprice = 50};
+	class 5Rnd_127x108_APDS_Mag								{ quality = 3; price = 500; sellprice = 50; };
 	class 10Rnd_50BW_Mag_F									{ quality = 3; price = 100; };
 
 	///////// Rockets /////////

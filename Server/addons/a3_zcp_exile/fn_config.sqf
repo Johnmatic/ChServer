@@ -386,7 +386,7 @@ ZCP_DMS_BoxOptics =						[							// List of optics that can spawn in a crate
 										"optic_MRCO",
 										"optic_SOS",
 										"optic_DMS",
-										"optic_LRPS"
+										"optic_LRPS",
 										"optic_Nightstalker"			// Nightstalker scope lost thermal in Exile v0.9.4
 									];
 ZCP_DMS_BoxBackpacks =					[							//List of backpacks that can spawn in a crate
@@ -432,7 +432,7 @@ ZCP_DMS_MilitaryVehicles =				[							// List of military vehicles that can spaw
 										"CUP_B_LR_Transport_CZ_W",
 										"CUP_B_LR_Transport_CZ_D",
 										"B_T_LSV_01_unarmed_F",
-										"O_T_LSV_02_unarmed_F",
+										"O_T_LSV_02_unarmed_F"
 									];
 
 ZCP_DMS_TransportTrucks =				[							// List of transport trucks that can spawn

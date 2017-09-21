@@ -24,5 +24,5 @@
     _control ctrlSetPosition [0,0, 1,1];
     _control ctrlCommit 0;
     missionNamespace setVariable ['RscAdminToolkitMessage_IDC', _controlIDC];
-    ["AdminToolkit", "This server is using the AdminToolkit"] call AdminToolkit_showMessage;
+    //["AdminToolkit", "This server is using the AdminToolkit"] call AdminToolkit_showMessage;
 };
