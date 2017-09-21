@@ -1845,7 +1845,15 @@ class CfgTraderCategories
 			"Exile_Car_BTR40_MG_Green",
 			"Exile_Car_HMMWV_M134_Green",
 			"Exile_Car_HMMWV_M2_Green",
-			"Exile_Car_SUV_Armed_Black"
+			"Exile_Car_SUV_Armed_Black",
+			"CUP_B_HMMWV_M2_GPK_USA",
+			"CUP_B_HMMWV_M2_GPK_ACR",
+			"CUP_B_Dingo_GER_Wdl",
+			"CUP_B_BRDM2_HQ_CDF",
+			"CUP_B_LR_Special_GMG_GB_D",
+			"CUP_B_Mastiff_LMG_GB_W",
+			"CUP_B_Ridgback_LMG_GB_W",
+			"CUP_B_Wolfhound_LMG_GB_W"
 		};
 	};
 

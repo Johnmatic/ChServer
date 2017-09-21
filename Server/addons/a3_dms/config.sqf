@@ -978,12 +978,13 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											#ifdef GIVE_AI_APEX_WEAPONS
 											"launch_RPG7_F",
 											#endif
-											"launch_NLAW_F",
 											"launch_RPG32_F",
-											"launch_B_Titan_short_F"
 										];
 	DMS_AI_wep_launchers_AA =			[							// AA Launchers
-											"launch_B_Titan_F"
+											#ifdef GIVE_AI_APEX_WEAPONS
+											"launch_RPG7_F",
+											#endif
+											"launch_RPG32_F",
 										];
 
 	DMS_RHeli_Height					= 500;						// Altitude of the heli when flying to drop point.
@@ -1222,7 +1223,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"Exile_Item_SandBagsKit_Corner",
 											"Exile_Item_SandBagsKit_Corner",
 											"Exile_Item_HBarrier5Kit"
-										] + DMS_Box_BaseParts_Wood + DMS_Box_BaseParts_Wood + DMS_Box_BaseParts_Wood + DMS_Box_BaseParts_Concrete;
+										] + DMS_Box_BaseParts_Wood + DMS_Box_BaseParts_Wood + DMS_Box_BaseParts_Concrete;
 	DMS_BoxCraftingMaterials =			[
 											"Exile_Item_Cement",
 											"Exile_Item_Sand",

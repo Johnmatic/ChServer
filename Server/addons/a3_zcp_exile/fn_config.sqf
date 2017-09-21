@@ -70,9 +70,9 @@ ZCP_UseSpecificNamesForCappers = false; // Use the player name, if false it says
 // ZCP_giveSurvivalBoxWithPoptabsReward = true; not used anymore. You can now define multiple rewards per mission.
 ZCP_RewardWeightForRandomChoice = [
 	["Poptabs", 4],
-	["BuildBox", 3],
+	["BuildBox", 4],
 	["WeaponBox", 4],
-	["SurvivalBox", 4],
+	["SurvivalBox", 3],
 	["Vehicle", 2],
 	["SniperWeaponBox", 1],
 	["BigWeaponBox", 2]
@@ -193,7 +193,11 @@ ZCP_DMS_CrateCase_Sniper =				[							// If you pass "Sniper" in _lootValues, th
                                                 ["srifle_LRR_F",1],
                                                 ["srifle_EBR_F",1],
                                                 ["hgun_Pistol_heavy_01_F",1],
-                                                ["hgun_PDW2000_F",1]
+                                                ["hgun_PDW2000_F",1],
+												["CUP_srifle_AS50",1],
+												["CUP_srifle_AWM_wdl",1],
+												["CUP_srifle_M107_Base",1],
+												["CUP_srifle_M110",1]
                                             ],
                                             [
                                                 ["ItemGPS",1],
@@ -226,6 +230,70 @@ ZCP_DMS_CrateCase_Sniper =				[							// If you pass "Sniper" in _lootValues, th
                                             ]
                                         ];
 ZCP_DMS_BoxWeapons =					[							// List of weapons that can spawn in a crate
+										"CUP_srifle_M110",
+										"CUP_srifle_CZ750",
+										"CUP_srifle_CZ550",
+										"CUP_srifle_M24_wdl",
+										"CUP_srifle_M24_des",
+										"CUP_srifle_M24_ghillie",
+										"CUP_srifle_M40A3_bipod",
+										"CUP_srifle_SVD",
+										"UP_srifle_SVD_des_ghillie_pso",
+										"CUP_srifle_VSSVintorez",
+										"CUP_arifle_AK47",
+										"CUP_arifle_AK107",
+										"CUP_arifle_AKM",
+										"CUP_arifle_AKS_Gold",
+										"CUP_smg_bizon",
+										"CUP_arifle_CZ805_A2",
+										"CUP_arifle_CZ805_B",
+										"CUP_arifle_FNFAL5062",
+										"CUP_arifle_FNFAL_OSW",
+										"CUP_arifle_FNFAL_railed",
+										"CUP_arifle_MG36",
+										"CUP_lmg_L110A1",
+										"CUP_srifle_L129A1",
+										"CUP_arifle_L85A2_G",
+										"CUP_srifle_M110",
+										"CUP_srifle_M14",
+										"CUP_arifle_M16A2_GL",
+										"CUP_lmg_M240",
+										"CUP_lmg_minimipara",
+										"CUP_lmg_m249_pip4",
+										"CUP_lmg_M60E4",
+										"CUP_lmg_Mk48_wdl",
+										"CUP_lmg_Pecheneg",
+										"CUP_arifle_Sa58P",
+										"CUP_arifle_Mk16_CQC",
+										"CUP_arifle_Mk16_CQC_SFG",
+										"CUP_arifle_Mk16_STD_FG",
+										"CUP_arifle_Mk16_SV",
+										"CUP_arifle_Mk17_CQC",
+										"CUP_arifle_Mk17_CQC_FG",
+										"CUP_arifle_Mk17_STD",
+										"CUP_arifle_Mk17_STD_FG",
+										"CUP_arifle_Mk20",
+										"CUP_arifle_XM8_Carbine",
+										"CUP_arifle_xm8_SAW",
+										"CUP_arifle_xm8_sharpshooter",
+										"CUP_arifle_XM8_Railed",
+										"CUP_arifle_XM8_Carbine_FG",
+										
+										"srifle_DMR_02_F",
+										"srifle_DMR_03_woodland_F",
+										"srifle_DMR_04_F",			// ASP-1 Kir
+										"srifle_DMR_05_blk_F",
+										"srifle_DMR_06_olive_F",
+										"MMG_01_hex_F",
+										"MMG_02_black_F",
+										"arifle_AK12_F",
+										"arifle_ARX_ghex_F",
+										"arifle_CTAR_blk_F",
+										"arifle_SPAR_01_khk_F",
+										"arifle_SPAR_03_khk_F",
+										//"srifle_DMR_07_ghex_F",				// Oh great, a 6.5mm 20 round sniper rifle... because everybody wanted a nerfed MXM :p
+										"LMG_03_F",
+										
 										"Exile_Melee_Axe",
 										"arifle_Katiba_GL_F",
 										"arifle_MX_GL_Black_F",
@@ -287,6 +355,16 @@ ZCP_DMS_BoxBaseParts =					[
 										"Exile_Item_WoodSupportKit",
 										"Exile_Item_FortificationUpgrade"
 									];
+ZCP_DMS_Box_BaseParts_Concrete =			[							// List of concrete base parts
+										"Exile_Item_ConcreteWallKit",
+										"Exile_Item_ConcreteWindowKit",
+										"Exile_Item_ConcreteDoorKit",
+										"Exile_Item_ConcreteDoorwayKit",
+										"Exile_Item_ConcreteGateKit",
+										"Exile_Item_ConcreteFloorKit",
+										"Exile_Item_ConcreteFloorPortKit",
+										"Exile_Item_ConcreteStairsKit"
+									];
 ZCP_DMS_BoxCraftingMaterials =			[
 										"Exile_Item_MetalPole",
 										"Exile_Item_MetalBoard",
@@ -299,7 +377,7 @@ ZCP_DMS_BoxTools =						[
 ZCP_DMS_BoxBuildingSupplies	=			[							// List of building supplies that can spawn in a crate ("ZCP_DMS_BoxBaseParts", "ZCP_DMS_BoxCraftingMaterials", and "ZCP_DMS_BoxTools" are automatically added to this list. "ZCP_DMS_BoxCraftingMaterials" is added twice for weight.)
 										"Exile_Item_DuctTape",
 										"Exile_Item_PortableGeneratorKit"
-									] + ZCP_DMS_BoxBaseParts + ZCP_DMS_BoxCraftingMaterials + ZCP_DMS_BoxCraftingMaterials + ZCP_DMS_BoxTools;
+									] + ZCP_DMS_BoxBaseParts + ZCP_DMS_BoxCraftingMaterials + ZCP_DMS_BoxCraftingMaterials + ZCP_DMS_BoxTools + ZCP_DMS_Box_BaseParts_Concrete + ZCP_DMS_Box_BaseParts_Concrete;
 ZCP_DMS_BoxOptics =						[							// List of optics that can spawn in a crate
 										"optic_Arco",
 										"optic_Hamr",
@@ -309,7 +387,7 @@ ZCP_DMS_BoxOptics =						[							// List of optics that can spawn in a crate
 										"optic_SOS",
 										"optic_DMS",
 										"optic_LRPS"
-										//"optic_Nightstalker"			// Nightstalker scope lost thermal in Exile v0.9.4
+										"optic_Nightstalker"			// Nightstalker scope lost thermal in Exile v0.9.4
 									];
 ZCP_DMS_BoxBackpacks =					[							//List of backpacks that can spawn in a crate
 										"B_Bergen_rgr",
@@ -325,19 +403,36 @@ ZCP_DMS_BoxItems						= ZCP_DMS_BoxSurvivalSupplies+ZCP_DMS_BoxBuildingSupplies+
 ZCP_DMS_RareLoot						= true;						// Potential chance to spawn rare loot in any crate.
 ZCP_DMS_RareLootList =					[							// List of rare loot to spawn
 										"Exile_Item_SafeKit",
-										"Exile_Item_CodeLock"
+										"Exile_Item_CodeLock",
+										"Exile_Boat_RubberDuck_Abstract"
 									];
-ZCP_DMS_RareLootChance	= 10;						// Percentage Chance to spawn rare loot in any crate | Default: 10%
+ZCP_DMS_RareLootChance	= 30;						// Percentage Chance to spawn rare loot in any crate | Default: 10%
 
 // Vehicles
 ZCP_DMS_ArmedVehicles =					[							// List of armed vehicles that can spawn
-										"Exile_Car_Offroad_Armed_Guerilla01"
+										"Exile_Car_Offroad_Armed_Guerilla01",
+										"CUP_B_HMMWV_M2_GPK_USA",
+										"CUP_B_HMMWV_M2_GPK_ACR",
+										"CUP_B_Dingo_GER_Wdl",
+										"CUP_B_BRDM2_HQ_CDF",
+										"CUP_B_LR_Special_GMG_GB_D",
+										"CUP_B_Mastiff_LMG_GB_W",
+										"CUP_B_Ridgback_LMG_GB_W",
+										"CUP_B_Wolfhound_LMG_GB_W"
 									];
 
 ZCP_DMS_MilitaryVehicles =				[							// List of military vehicles that can spawn
 										"Exile_Car_Strider",
 										"Exile_Car_Hunter",
-										"Exile_Car_Ifrit"
+										"Exile_Car_Ifrit",
+										"CUP_B_HMMWV_Ambulance_USA",
+										"CUP_B_HMMWV_Terminal_USA",
+										"CUP_B_HMMWV_Ambulance_ACR",
+										"CUP_B_LR_Ambulance_CZ_W",
+										"CUP_B_LR_Transport_CZ_W",
+										"CUP_B_LR_Transport_CZ_D",
+										"B_T_LSV_01_unarmed_F",
+										"O_T_LSV_02_unarmed_F",
 									];
 
 ZCP_DMS_TransportTrucks =				[							// List of transport trucks that can spawn
@@ -377,7 +472,7 @@ ZCP_DMS_TransportHelis =				[							// List of transport helis that can spawn
 										"Exile_Chopper_Taru_Transport_Black"
 									];
 
-ZCP_VehicleReward = ZCP_DMS_TransportTrucks;
+ZCP_VehicleReward = ZCP_DMS_TransportTrucks + ZCP_DMS_CivilianVehicles + ZCP_DMS_MilitaryVehicles +ZCP_DMS_ArmedVehicles;
 ZCP_DMS_DEBUG = false;
 
 

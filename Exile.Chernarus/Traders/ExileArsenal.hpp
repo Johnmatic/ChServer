@@ -2715,4 +2715,6 @@ class CfgExileArsenal
 	class CUP_O_V3S_Open_TKM											{ quality = 1; price = 2000; };
 	class CUP_O_V3S_Covered_TKM											{ quality = 1; price = 2000; };
 	class CUP_B_MTVR_USMC												{ quality = 1; price = 2000; };
+	//OMG!!
+	class Exile_Boat_RubberDuck_Abstract								{ quality = 5; price = 50000; };
 };
