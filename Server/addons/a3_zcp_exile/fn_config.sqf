@@ -59,7 +59,7 @@ ZCP_CONFIG_GroupDistanceForRespect = 1000; // meters to be close to the capper t
 
 ZCP_CleanupBase = true; // Let the base dissappear after completing
 ZCP_CleanupBaseWithAIBomber = true; // Cleanup with a airstrike
-ZCP_CleanupAIVehicleClasses = ['B_Plane_CAS_01_F', 'CUP_O_C130J_TKA', 'CUP_O_AN2_TK', 'C_Plane_Civil_01_racing_F']; // Any flying vehicle in arma (default B_Plane_CAS_01_F = A10)
+ZCP_CleanupAIVehicleClasses = ['B_Plane_CAS_01_F']; // Any flying vehicle in arma (default B_Plane_CAS_01_F = A10)
 ZCP_FlyHeight = 150; // Height of the flying plane;
 
 ZCP_BomberCanDestroyMapBuildings = false; // if true damage of the bombs are applied to all objects in the blastradius.
