@@ -1,2 +1,5 @@
 
 build.bat
+*.pbo
+LootTable/CfgExileLootServer.hpp
+Server/addons/exile_server_config/CfgExileLootServer.hpp
