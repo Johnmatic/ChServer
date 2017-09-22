@@ -24,7 +24,8 @@ class CfgTraders
 			"SniperRiflesCUP",
 			"MuzzleAttachmentsCUP",
 			"OpticAttachmentsCUP",
-			"PointerAttachmentsCUP"
+			"PointerAttachmentsCUP",
+			"NVG"
 		};
 	};
 
@@ -56,7 +57,8 @@ class CfgTraders
 			"Backpacks",
 			"FirstAid",
 			//CUP
-			"BackpacksCUP"
+			"BackpacksCUP",
+			"NVG"
 		};
 	};
 
@@ -78,7 +80,8 @@ class CfgTraders
 		categories[] =
 		{
 			"Hardware",
-			"Tools"
+			"Tools",
+			"NVG"
 		};
 	};
 
@@ -103,7 +106,8 @@ class CfgTraders
 		{
 			"Choppers",
 			"Planes",
-			"ChoppersCUP"
+			"ChoppersCUP",
+			"PlanesCUP"
 		};
 	};
 
@@ -152,7 +156,8 @@ class CfgTraders
 			"SpecialAmmunition",
 			"SpecialAttachments",
 			"SpecialTools",
-			"SpecialExplosives"
+			"SpecialExplosives",
+			"NVG"
 		};
 	};
 
@@ -162,7 +167,8 @@ class CfgTraders
 		showWeaponFilter = 0;
 		categories[] =
 		{
-			"SpecialVehicles"
+			"SpecialVehicles",
+			"SpecialVehiclesCUP"
 		};
 	};
 

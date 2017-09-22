@@ -491,7 +491,6 @@ class CfgTraderCategories
 		items[] =
 		{
 			"CUP_acc_Glock17_Flashlight",
-			"CUP_acc_sffh",
 			"CUP_acc_Flashlight",
 			"CUP_acc_XM8_light_module",
 			"CUP_acc_Flashlight_desert",
@@ -563,7 +562,12 @@ class CfgTraderCategories
 			"CUP_muzzle_snds_MicroUzi",
 			"CUP_muzzle_Bizon",
 			"CUP_muzzle_PBS4",
-			"CUP_muzzle_PB6P9"
+			"CUP_muzzle_PB6P9",
+			"CUP_muzzle_snds_M16_camo",
+			"CUP_muzzle_snds_M16",
+			"CUP_muzzle_snds_L85",
+			"CUP_muzzle_snds_SCAR_L",
+			"CUP_muzzle_snds_SCAR_H"
 		};
 	};
 
@@ -644,7 +648,33 @@ class CfgTraderCategories
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemoptic_ca.paa";
 		items[] =
 		{
-			//Add here
+			"CUP_optic_MAAWS_Scope",
+			"CUP_optic_Kobra",
+			"CUP_optic_PSO_1",
+			"CUP_optic_NSPU",
+			"CUP_optic_GOSHAWK",
+			"CUP_muzzle_PBS4",
+			"CUP_muzzle_PB6P9",
+			"CUP_optic_ZDDot",
+			"CUP_optic_RCO",
+			"CUP_optic_HoloBlack",
+			"CUP_muzzle_snds_G36_black",
+			"CUP_optic_HoloDesert",
+			"CUP_muzzle_snds_G36_desert",
+			"CUP_optic_Eotech533",
+			"CUP_optic_SUSAT",
+			//"CUP_optic_CWS",
+			"CUP_acc_sffh",
+			"CUP_optic_Elcan",
+			"CUP_optic_Elcan_reflex",
+			"CUP_optic_ElCAN_SpecterDR",
+			"CUP_optic_ACOG",
+			"CUP_optic_AN_PVS_4",
+			"CUP_optic_AN_PVS_10",
+			"CUP_optic_CompM2_Black",
+			"CUP_optic_CompM2_Woodland",
+			"CUP_optic_CompM2_Woodland2",
+			"CUP_optic_CompM2_Desert"
 		};
 	};
 
@@ -821,7 +851,6 @@ class CfgTraderCategories
 			"V_RebreatherB",
 			"V_RebreatherIA",
 			"V_RebreatherIR",
-			"Exile_Headgear_GasMask",
 			"G_Diving",
 			"G_B_Diving",
 			"G_O_Diving",
@@ -1129,7 +1158,6 @@ class CfgTraderCategories
 			"CUP_1Rnd_SmokeRed_M203",
 			"CUP_1Rnd_SmokeGreen_M203",
 			"CUP_1Rnd_SmokeYellow_M203",
-			"CUP_6Rnd_HE_M203"
 		};
 	};
 
@@ -1378,170 +1406,77 @@ class CfgTraderCategories
 		items[] =
 		{
 			"CUP_srifle_CZ750",											//CZ750
-			"CUP_srifle_CZ750_SOS_bipod",								//CZ750
 			"CUP_arifle_AK107",											//AK107
 			"CUP_arifle_AK107_GL",										//AK107
-			"CUP_arifle_AK107_GL_kobra",								//AK107
-			"CUP_arifle_AK107_GL_pso",									//AK107
-			"CUP_arifle_AK107_kobra",									//AK107
-			"CUP_arifle_AK107_pso",										//AK107
 			"CUP_arifle_AK47",											//AK47
 			"CUP_arifle_AK74",											//AK74
 			"CUP_arifle_AK74_GL",										//AK74
-			"CUP_arifle_AK74_GL_kobra",									//AK74
 			"CUP_arifle_AK74M",											//AK74M
 			"CUP_arifle_AK74M_GL",										//AK74
-			"CUP_arifle_AK74M_GL_kobra",								//AK74
-			"CUP_arifle_AK74M_GL_pso",									//AK74
-			"CUP_arifle_AK74M_kobra",								//AK74
-			"CUP_arifle_AK74M_pso",										//AK74
 			"CUP_arifle_AKM",											//AKM
 			"CUP_arifle_AKS",											//AKS74
-			"CUP_arifle_AKS74_Goshawk",									//AKS74
-			"CUP_arifle_AKS74_kobra",									//AKS74
-			"CUP_arifle_AKS74_NSPU",									//AKS74
-			"CUP_arifle_AKS74_pso",										//AKS74
 			"CUP_arifle_AKS74U",										//AKS74U
-			"CUP_arifle_AKS74UN_kobra_snds",							//AK474
 			"CUP_arifle_AKS_Gold",										//ROSYJSKI OLIGARCHA
 			"CUP_arifle_CZ805_A1",										//CZ805 5,56
-			"CUP_arifle_CZ805_A1_Aco_Laser",							//CZ805 5,56
-			"CUP_arifle_CZ805_A1_Holo_Laser",						//CZ805 5,56
-			"CUP_arifle_CZ805_A1_MRCO_Laser",							//CZ805 5,56
-			"CUP_arifle_CZ805_A1_ZDDot_Laser",							//CZ805 5,56
 			"CUP_arifle_CZ805_A2",										//CZ805 5,56
-			"CUP_arifle_CZ805_A2_Aco_Laser",							//CZ805 5,56
-			"CUP_arifle_CZ805_A2_Holo_Laser",							//CZ805 5,56
-			"CUP_arifle_CZ805_A2_MRCO_Laser",							//CZ805 5,56
-			"CUP_arifle_CZ805_A2_ZDDot_Flashlight_Snds",				//CZ805 5,56
 			"CUP_arifle_CZ805_B",									//CZ805 7,62
 			"CUP_arifle_CZ805_B_GL",									//CZ805GL 7,62
 			"CUP_arifle_CZ805_GL",										//CZ805GL 5,56
-			"CUP_arifle_CZ805_GL_Hamr_Laser",							//CZ805GL 5,56
-			"CUP_arifle_CZ805_GL_ZDDot_Laser",							//CZ805 5,56
-			"CUP_arifle_CZ805B_GL_ACOG_Laser",							//CZ805 7,62
 			"CUP_arifle_FNFAL",											//FNFAL 7,62
-			"CUP_arifle_FNFAL5061",										//FAFAL 7,62
-			"CUP_arifle_FNFAL5062",										//FNFAL 7,62
-			"CUP_arifle_FNFAL_ANPVS4",									//FNFAL 7,62
-			"CUP_arifle_FNFAL_OSW",										//FNFAL 7,62
 			"CUP_arifle_FNFAL_railed",									//FNFAL 7,62
 			"CUP_arifle_G36A",											//G36A 5,56
 			"CUP_arifle_G36A_camo",										//G36A 5,56
 			"CUP_arifle_G36C",											//G36C 5,56
 			"CUP_arifle_G36C_camo",										//G36C 5,56
-			"CUP_arifle_G36C_camo_holo_snds",							//G36C 5,56
-			"CUP_arifle_G36C_holo_snds",								//G36C 5,56
 			"CUP_arifle_G36K",											//G36K 5,56
 			"CUP_arifle_G36K_camo",										//G36K 5,56
 			"CUP_arifle_L85A2",											//L85A2 5,56
-			"CUP_arifle_L85A2_ACOG_Laser",								//L85A2 5,56
-			"CUP_arifle_L85A2_CWS_Laser",								//L85A2 5,56
-			"CUP_arifle_L85A2_G",										//L85A2 5,56
 			"CUP_arifle_L85A2_GL",										//L85A2GL 5,56
-			"CUP_arifle_L85A2_GL_ACOG_Laser",							//L85A2 5,56
-			"CUP_arifle_L85A2_GL_Holo_Laser",							//L85A2 5,56
-			"CUP_arifle_L85A2_GL_SUSAT_Laser",							//L85A2 5,56
-			"CUP_arifle_L85A2_Holo_laser",								//L85A2 5,56
-			"CUP_arifle_L85A2_NG",										//L85A2 5,56
-			"CUP_arifle_L85A2_SUSAT_Laser",								//L85A2 5,56
 			"CUP_arifle_L86A2",											//L85A2 5,56
-			"CUP_arifle_L86A2_ACOG",									//L85A2 5,56
 			"CUP_arifle_M16A2",											//M16A2 5,56
 			"CUP_arifle_M16A2_GL",										//M16A2 5,56
-			"CUP_arifle_M16A4_ACOG_Laser",								//M16A2 5,56
-			"CUP_arifle_M16A4_Aim_Laser",								//M16A2 5,56
 			"CUP_arifle_M16A4_Base",									//M16A4 5,56
 			"CUP_arifle_M16A4_GL",										//M16A4 5,56
-			"CUP_arifle_M16A4_GL_ACOG_Laser", 							//M16A4 5,56
-			"CUP_arifle_M16A4_GL_Laser",								//M16A4GL 5,56
 			"CUP_arifle_M4A1",											//M4A1 5,56
-			"CUP_arifle_M4A1_Aim",										//M4A1 5,56
-			"CUP_arifle_M4A1_Aim_Laser_snds",							//M4A1 5,56
 			"CUP_arifle_M4A1_black",									//M4A1 5,56
-			"CUP_arifle_M4A1_BUIS_camo_GL",								//M4A1GL 5,56
-			"CUP_arifle_M4A1_BUIS_desert_GL",							//M4A1GL 5,56
-			"CUP_arifle_M4A1_BUIS_GL",									//M4A1GL 5,56
 			"CUP_arifle_M4A1_camo",										//M4A1 5,56
-			"CUP_arifle_M4A1_camo_Aim",									//M4A1 5,56
-			"CUP_arifle_M4A1_camo_AIM_snds",							//M4A1 5,56
-			"CUP_arifle_M4A1_camo_GL_Holo_Flashlight",					//M4A1GL 5,56
-			"CUP_arifle_M4A1_camo_GL_Holo_Flashlight_Snds",				//M4A1GL 5,56
 			"CUP_arifle_M4A1_desert",								//M4A1 5,56
-			"CUP_arifle_M4A1_GL_ACOG_Flashlight", 						//M4A1GL 5,56
-			"CUP_arifle_M4A1_GL_Holo_Flashlight",						//M4A1GL 5,56
-			"CUP_arifle_M4A1_Holo",										//M4A1 5,56
-			"CUP_arifle_M4A1_Holo_Laser",								//M4A1 5,56
-			"CUP_arifle_M4A1_LeupoldMk4CQT_Laser",						//M4A1 5,56
-			"CUP_arifle_M4A1_LeupoldMk4MRT",							//M4A1 5,56
-			"CUP_arifle_M4A1_M203_ACOG_Laser",							//M4A1 5,56
-			"CUP_arifle_M4A1_M203_ANPAS13c1_Laser", 					//M4A1 5,56
-			"CUP_arifle_M4A1_M203_Holo_Laser",							//M4A1 5,56
 			"CUP_arifle_M4A3_desert",									//M4A3 5,56
-			"CUP_arifle_M4A3_desert_Aim_Flashlight", 					//M4A3 5,56
-			"CUP_arifle_M4A3_desert_GL_ACOG_Laser",	 					//M4A3 5,56
 			"CUP_arifle_MG36",											//MG36 5,56
 			"CUP_arifle_MG36_camo",										//MG36 5,56
-			"CUP_arifle_MG36_camo_holo",								//MG36 5,56
-			"CUP_arifle_MG36_holo",										//MG36 5,56
 			"CUP_arifle_Mk16_CQC",										//MK16 5,56
 			"CUP_arifle_Mk16_CQC_EGLM",									//MK16GL 5,56
-			"CUP_arifle_Mk16_CQC_EGLM_Holo_Laser_mfsup",				//MK16GL 5,56
 			"CUP_arifle_Mk16_CQC_FG",									//MK16 5,56
-			"CUP_arifle_Mk16_CQC_FG_Aim_Laser_snds",					//MK16 5,56
 			"CUP_arifle_Mk16_CQC_SFG",									//MK16 5,56
-			"CUP_arifle_Mk16_CQC_SFG_Holo",								//MK16 5,56
-			"CUP_arifle_Mk16_LeupoldMk4MRT",							//MK16 5,56
 			"CUP_arifle_Mk16_STD",										//MK16 5,56
 			"CUP_arifle_Mk16_STD_EGLM",									//MK16GL 5,56
-			"CUP_arifle_Mk16_STD_EGLM_ACOG_Laser",						//MK16GL 5,56
-			"CUP_arifle_Mk16_STD_EGLM_ANPAS13c1_Laser_mfsup",			//MK16GL 5,56
 			"CUP_arifle_Mk16_STD_FG",									//MK16 5,56
-			"CUP_arifle_Mk16_STD_FG_Holo_Laser",						//MK16 5,56
-			"CUP_arifle_Mk16_STD_FG_LeupoldMk4CQT_Laser",				//MK16 5,56
 			"CUP_arifle_Mk16_STD_SFG",									//MK16 5,56
 			"CUP_arifle_Mk16_SV",									//MK16 5,56
 			"CUP_arifle_Mk17_CQC",										//MK16 7,62
 			"CUP_arifle_Mk17_CQC_EGLM",									//MK16GL 7,62
 			"CUP_arifle_Mk17_CQC_FG",									//MK16 7,62
 			"CUP_arifle_Mk17_CQC_SFG",									//MK16 7,62
-			"CUP_arifle_Mk17_CQC_SFG_Aim_mfsup",						//MK17 7,62
 			"CUP_arifle_Mk17_STD",										//MK17 7,62
-			"CUP_arifle_Mk17_STD_EGL_ElcanSpecter_Laser",				//MK17GL 7,62
 			"CUP_arifle_Mk17_STD_EGLM",									//MK17GL 7,62
 			"CUP_arifle_Mk17_STD_FG",									//MK17 7,62
-			"CUP_arifle_Mk17_STD_FG_Aim_Laser_snds",					//MK17 7,62
-			"CUP_arifle_Mk17_STD_FG_ANPAS13c1_Laser_Snds",				//MK17 7,62
 			"CUP_arifle_Mk17_STD_SFG",									//MK17 7,62
 			"CUP_arifle_Mk20",											//MK20 7,62
-			"CUP_arifle_Mk20_LeupoldMk4MRT",							//MK20 7,62
-			"CUP_arifle_Mk20_SB11420_snds",								//MK20 7,60
 			"CUP_arifle_Sa58P",											//SA58P 7,62
 			"CUP_arifle_Sa58P_des",										//SA58P 7,62
 			"CUP_arifle_Sa58RIS1",										//SA58R 7,62
-			"CUP_arifle_Sa58RIS1_Aco_Laser",							//SA58R 7,62
-			"CUP_arifle_Sa58RIS1_camo_Aco_Laser",						//SA58R 7,62
 			"CUP_arifle_Sa58RIS1_des",									//SA58R 7,62
 			"CUP_arifle_Sa58RIS2",										//SA58R 7,62
-			"CUP_arifle_Sa58RIS2_Arco_Laser",							//SA58R 7,62
 			"CUP_arifle_Sa58RIS2_camo",									//SA58R	7,62
-			"CUP_arifle_Sa58RIS2_camo_Arco_Laser",						//SA58R 7,62
 			"CUP_arifle_Sa58RIS2_gl",									//SA58RGL 7,62
 			"CUP_arifle_Sa58V",											//SA58V 7,62
-			"CUP_arifle_Sa58V_ACOG_Laser",								//SA58V 7,62
-			"CUP_arifle_Sa58V_Aim_Laser",								//SA58V 7,62
 			"CUP_arifle_Sa58V_camo",									//SA58V 7,62
-			"CUP_arifle_XM8_Carbine",								//XM8 5,56
+			"CUP_arifle_XM8_Carbine",									//XM8 5,56
 			"CUP_arifle_XM8_Carbine_FG",								//XM8 5,56
 			"CUP_arifle_XM8_Carbine_GL",								//XM8GL 5,56
 			"CUP_arifle_XM8_Compact",									//XM8 5,56
-			"CUP_arifle_XM8_Compact_Holo_Flashlight",					//XM8 5,56
 			"CUP_arifle_XM8_Compact_Rail",								//XM8 5,56
 			"CUP_arifle_XM8_Railed",									//XM8 5,56
-			"CUP_arifle_XM8_Railed_ANPAS13c1_Laser",					//XM8 5,56
-			"CUP_arifle_XM8_Railed_ANPAS13c1_Laser_snds",				//XM8 5,56
-			"CUP_arifle_XM8_Railed_Holo_Laser_snds",					//XM8 5,56
-			"CUP_arifle_xm8_SAW",										//XM8 5,56
 			"CUP_arifle_xm8_sharpshooter",								//XM8 5,56
 			"CUP_srifle_M14"											//M14 7,62
 		};
@@ -1554,7 +1489,6 @@ class CfgTraderCategories
 		items[] =
 		{
 			"Exile_Weapon_M1014",
-			"CUP_sgun_AA12",	//AA12
 			"CUP_sgun_Saiga12K"	//SAIGA
 		};
 	};
@@ -1584,10 +1518,6 @@ class CfgTraderCategories
 			"srifle_DMR_06_camo_F",
 			"srifle_DMR_06_olive_F",
 			"srifle_EBR_F",
-			"srifle_GM6_camo_F",
-			"srifle_GM6_F",
-			"srifle_LRR_camo_F",
-			"srifle_LRR_F",
 			"Exile_Weapon_CZ550",
 			"Exile_Weapon_SVD",
 			"Exile_Weapon_SVDCamo",
@@ -1595,8 +1525,6 @@ class CfgTraderCategories
 			"Exile_Weapon_DMR",
 			"Exile_Weapon_LeeEnfield",
 			//Apex
-			"srifle_LRR_tna_F",
-			"srifle_GM6_ghex_F",
 			"srifle_DMR_07_blk_F",
 			"srifle_DMR_07_hex_F",
 			"srifle_DMR_07_ghex_F"
@@ -1643,7 +1571,6 @@ class CfgTraderCategories
 			"Exile_Car_Offroad_Rusty3",
 			"Exile_Car_Offroad_Repair_Civillian",
 			"Exile_Car_Offroad_Armed_Guerilla01",
-			"Exile_Car_BRDM2_HQ",
 			"Exile_Car_BTR40_Green",
 			"Exile_Car_HMMWV_MEV_Green",
 			"Exile_Car_HMMWV_UNA_Green",
@@ -1665,12 +1592,7 @@ class CfgTraderCategories
 		items[] =
 		{
 			"CUP_O_Gaz_Vodnik_MedEvac_RU",
-			"CUP_O_UAZ_MG_CHDKZ",
-			"CUP_B_HMMWV_DSHKM_GPK_ACR",
-			"CUP_B_HMMWV_M2_GPK_ACR",
-			"CUP_B_HMMWV_M1114_USMC",
 			"CUP_B_HMMWV_Unarmed_USMC",
-			"CUP_B_LR_MG_CZ_W",
 			"CUP_B_LR_Transport_GB_W",
 			"CUP_C_LR_Transport_CTK",
 			"CUP_O_Datsun_PK",
@@ -1811,7 +1733,16 @@ class CfgTraderCategories
 			"Exile_Plane_AN2_Green",
 			"Exile_Plane_Ceasar",
 			"Exile_Plane_BlackfishInfantry",
-			"Exile_Plane_BlackfishVehicle",
+			"Exile_Plane_BlackfishVehicle"
+		};
+	};
+
+	class PlanesCUP
+	{
+		name = "CUP Planes";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] =
+		{
 			"CUP_B_C130J_Cargo_USMC",
 			"CUP_O_AN2_TK"
 		};
@@ -1846,6 +1777,16 @@ class CfgTraderCategories
 			"Exile_Car_HMMWV_M134_Green",
 			"Exile_Car_HMMWV_M2_Green",
 			"Exile_Car_SUV_Armed_Black",
+			"Exile_Car_BRDM2_HQ"
+		};
+	};
+
+	class SpecialVehiclesCUP
+	{
+		name = "CUP Special vehicles";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] =
+		{
 			"CUP_B_HMMWV_M2_GPK_USA",
 			"CUP_B_HMMWV_M2_GPK_ACR",
 			"CUP_B_Dingo_GER_Wdl",
@@ -1853,7 +1794,11 @@ class CfgTraderCategories
 			"CUP_B_LR_Special_GMG_GB_D",
 			"CUP_B_Mastiff_LMG_GB_W",
 			"CUP_B_Ridgback_LMG_GB_W",
-			"CUP_B_Wolfhound_LMG_GB_W"
+			"CUP_B_Wolfhound_LMG_GB_W",
+			"CUP_O_UAZ_MG_CHDKZ",
+			"CUP_B_LR_MG_CZ_W",
+			"CUP_B_HMMWV_M1114_USMC",
+			"CUP_B_HMMWV_DSHKM_GPK_ACR"
 		};
 	};
 
@@ -1863,18 +1808,21 @@ class CfgTraderCategories
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\CargoMag_ca.paa";
 		items[] =
 		{
-			"CUP_launch_M136",
-			"CUP_launch_MAAWS",
-			"CUP_launch_RPG18",
+			"CUP_sgun_AA12",	//AA12
+			"launch_RPG7_F",
+			"launch_RPG32_F",
 			"CUP_srifle_ksvk",
 			"CUP_srifle_AS50",
 			"CUP_srifle_AWM_des",
 			"CUP_srifle_AWM_wdl",
 			"CUP_srifle_G22_des",
 			"CUP_srifle_M107_Base",
-			"CUP_launch_RPG7V",
 			"srifle_GM6_F",
+			"srifle_GM6_ghex_F",
+			"srifle_GM6_camo_F",
+			"srifle_LRR_camo_F",
 			"srifle_LRR_F",
+			"srifle_LRR_tna_F",
 			"MMG_01_hex_F",
 			"MMG_01_tan_F",
 			"MMG_02_black_F",
@@ -1889,21 +1837,11 @@ class CfgTraderCategories
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\CargoMag_ca.paa";
 		items[] =
 		{
-			"CUP_M136_M",
-			"CUP_MAAWS_HEDP_M",
-			"CUP_MAAWS_HEAT_M",
-			"CUP_RPG18_M",
 			"CUP_5Rnd_127x108_KSVK_M",
 			"CUP_5Rnd_127x99_as50_M",
 			"CUP_5Rnd_86x70_L115A1",
 			"CUP_5Rnd_762x67_G22",
 			"CUP_10Rnd_127x99_M107",
-			"CUP_PG7V_M",
-			"CUP_PG7VM_M",
-			"CUP_PG7VL_M",
-			"CUP_PG7VR_M",
-			"CUP_TBG7V_M",
-			"CUP_OG7_M",
 			"Exile_Magazine_5Rnd_127x108_APDS_Bullet_Cam_Mag",
 			"Exile_Magazine_7Rnd_408_Bullet_Cam_Mag",
 			"Exile_Magazine_5Rnd_127x108_Bullet_Cam_Mag",
@@ -1921,8 +1859,6 @@ class CfgTraderCategories
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\CargoMag_ca.paa";
 		items[] =
 		{
-			"CUP_optic_MAAWS_Scope",
-			"CUP_optic_NSPU_RPG",
 			"CUP_optic_PSO_1",
 			"CUP_optic_PSO_3",
 			"CUP_optic_SB_3_12x50_PMII",
@@ -1947,9 +1883,7 @@ class CfgTraderCategories
 			"bipod_01_F_snd",
 			"bipod_01_F_mtp",
 			"bipod_01_F_blk",
-			"bipod_01_F_khk",
-			"CUP_bipod_Harris_1A2_L",
-			"CUP_bipod_VLTOR_Modpod"
+			"bipod_01_F_khk"
 		};
 	};
 
@@ -1959,8 +1893,8 @@ class CfgTraderCategories
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\CargoMag_ca.paa";
 		items[] =
 		{
-			"CUP_Laserdesignator",
-			"Rangefinder"
+			"Rangefinder",
+			"Exile_Headgear_GasMask"
 		};
 	};
 

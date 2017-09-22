@@ -1162,7 +1162,7 @@
 3, H_Hat_camo
 3, H_Watchcap_blk
 3, H_Watchcap_khk
-4, Exile_Headgear_GasMask
+0, Exile_Headgear_GasMask
 4, H_Booniehat_dgtl
 4, H_Booniehat_dirty
 4, H_Booniehat_grn
@@ -1297,7 +1297,7 @@
 3, H_HelmetSpecB_blk
 3, H_HelmetSpecB_paint1
 3, H_HelmetSpecB_paint2
-4, Exile_Headgear_GasMask
+0, Exile_Headgear_GasMask
 4, H_MilCap_blue
 4, H_MilCap_dgtl
 4, H_MilCap_mcamo
