@@ -102,13 +102,13 @@
 1, SMG_05_F		// Protector 9mm
 1, hgun_PDW2000_F	// PDW2000 9 mm
 1, CUP_hgun_MicroUzi	
-1, CUP_hgun_MicroUzi_snds
+//1, CUP_hgun_MicroUzi_snds
 1, CUP_hgun_SA61
 1, CUP_smg_bizon
-1, CUP_smg_bizon_snds
+//1, CUP_smg_bizon_snds
 1, CUP_smg_EVO
-1, CUP_smg_EVO_MRad_Flashlight
-1, CUP_smg_EVO_MRad_Flashlight_Snds
+//1, CUP_smg_EVO_MRad_Flashlight
+//1, CUP_smg_EVO_MRad_Flashlight_Snds
 1, CUP_smg_MP5A5
 1, CUP_smg_MP5SD6
 

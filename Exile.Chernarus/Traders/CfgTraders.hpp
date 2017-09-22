@@ -94,7 +94,8 @@ class CfgTraders
 			"Cars",
 			"Trucks",
 			"CarsCUP",
-			"TrucksCUP"
+			"TrucksCUP",
+			"TrucksFuel"
 		};
 	};
 

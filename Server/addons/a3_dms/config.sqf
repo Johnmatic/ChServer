@@ -972,7 +972,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_ai_launchers_per_group			= 2;						// How many units per AI group can get a launcher.
 	DMS_ai_use_launchers_chance			= 50;						// Percentage chance to actually spawn the launcher (per-unit). With "DMS_ai_launchers_per_group" set to 2, and "DMS_ai_use_launchers_chance" set to 50, there will be an average of 1 launcher per group.
 	DMS_AI_launcher_ammo_count			= 1;						// How many rockets an AI will get with its launcher
-	DMS_ai_remove_launchers				= true;						// Remove rocket launchers on AI death
+	DMS_ai_remove_launchers				= false;						// Remove rocket launchers on AI death
 
 	DMS_AI_wep_launchers_AT =			[							// AT Launchers
 											#ifdef GIVE_AI_APEX_WEAPONS
@@ -1288,27 +1288,29 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_RareLootList =					[							// List of rare loot to spawn
 											"Exile_Item_SafeKit",
 											"Exile_Item_CodeLock",
-											"Exile_Boat_RubberDuck_Abstract"
+											"Exile_Boat_RubberDuck_Abstract",
+											"CUP_item_Money"
 										];
-	DMS_RareLootChance					= 10;						// Percentage Chance to spawn rare loot in any crate | Default: 10%
+	DMS_RareLootChance					= 20;						// Percentage Chance to spawn rare loot in any crate | Default: 10%
 
 	// Vehicles
 	DMS_ArmedVehicles =					[							// List of armed vehicles that can spawn
-											#ifdef USE_CUP_VEHICLES
+											"Exile_Car_BTR40_MG_Green",
+											"Exile_Car_HMMWV_M134_Green",
+											"Exile_Car_HMMWV_M2_Green",
+											"Exile_Car_SUV_Armed_Black",
 											"CUP_B_HMMWV_M2_GPK_USA",
 											"CUP_B_HMMWV_M2_GPK_ACR",
 											"CUP_B_Dingo_GER_Wdl",
-											"CUP_B_BRDM2_HQ_CDF",
 											"CUP_B_LR_Special_GMG_GB_D",
 											"CUP_B_Mastiff_LMG_GB_W",
 											"CUP_B_Ridgback_LMG_GB_W",
 											"CUP_B_Wolfhound_LMG_GB_W",
-											#endif
-											#ifdef USE_APEX_VEHICLES
-											"B_T_LSV_01_armed_F",
-											"O_T_LSV_02_armed_F",
-											#endif
-											"Exile_Car_Offroad_Armed_Guerilla01"
+											"CUP_O_UAZ_MG_CHDKZ",
+											"CUP_B_LR_MG_CZ_W",
+											"CUP_B_HMMWV_M1114_USMC",
+											"CUP_B_HMMWV_DSHKM_GPK_ACR"
+											
 										];
 
 	DMS_MilitaryVehicles =				[							// List of (unarmed) military vehicles that can spawn
@@ -1371,6 +1373,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"C_Offroad_02_unarmed_F",
 											"I_C_Van_01_transport_F",
 											#endif
+											"Exile_Car_Ikarus_Party",
 											"Exile_Car_SUV_Red",
 											"Exile_Car_Hatchback_Rusty1",
 											"Exile_Car_Hatchback_Rusty2",

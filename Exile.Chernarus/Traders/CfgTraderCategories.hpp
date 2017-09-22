@@ -1275,13 +1275,13 @@ class CfgTraderCategories
 			"SMG_02_F",
 			"SMG_05_F",
 			"CUP_hgun_MicroUzi",
-			"CUP_hgun_MicroUzi_snds",
+			//"CUP_hgun_MicroUzi_snds",
 			"CUP_hgun_SA61",
 			"CUP_smg_bizon",
-			"CUP_smg_bizon_snds",
+			//"CUP_smg_bizon_snds",
 			"CUP_smg_EVO",
-			"CUP_smg_EVO_MRad_Flashlight",
-			"CUP_smg_EVO_MRad_Flashlight_Snds",
+			//"CUP_smg_EVO_MRad_Flashlight",
+			//"CUP_smg_EVO_MRad_Flashlight_Snds",
 			"CUP_smg_MP5A5",
 			"CUP_smg_MP5SD6"
 		};
@@ -1607,8 +1607,7 @@ class CfgTraderCategories
 			"CUP_C_Golf4_camodark_Civ",
 			"CUP_C_Golf4_reptile_Civ",
 			"CUP_M1030",
-			"CUP_B_M1133_MEV_Woodland",
-			"CUP_O_BMP2_AMB_TKA"
+			"CUP_B_M1133_MEV_Woodland"
 		};
 	};
 
@@ -1620,7 +1619,6 @@ class CfgTraderCategories
 		{
 			"Exile_Car_Van_Black",
 			"Exile_Car_Van_Box_Black",
-			"Exile_Car_Van_Fuel_Black",
 			"Exile_Car_Ural_Open_Worker",
 			"Exile_Car_Ural_Covered_Worker",
 			"Exile_Car_V3S_Covered",
@@ -1628,6 +1626,24 @@ class CfgTraderCategories
 			"Exile_Car_Tempest",
 			"Exile_Car_HEMMT",
 			"Exile_Car_Ikarus_Blue"
+		};
+	};
+
+	class TrucksFuel
+	{
+		name = "Refuel Trucks";
+		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\itemacc_ca.paa";
+		items[] =
+		{
+			"CUP_B_Ural_Refuel_CDF",
+			"CUP_B_MTVR_Refuel_USA",
+			"CUP_B_MTVR_Refuel_USMC",
+			"Exile_Car_Van_Fuel_Black",
+			"Exile_Car_Van_Fuel_White",
+			"Exile_Car_Van_Fuel_Red",
+			"Exile_Car_Van_Fuel_Guerilla01",
+			"Exile_Car_Van_Fuel_Guerilla02",
+			"Exile_Car_Van_Fuel_Guerilla03"
 		};
 	};
 
@@ -1642,7 +1658,10 @@ class CfgTraderCategories
 			"CUP_B_MTVR_USA",
 			"CUP_B_MTVR_Ammo_USA",
 			"CUP_B_Ural_Empty_CDF",
-			"CUP_B_MTVR_USMC"
+			"CUP_B_Ural_Open_CDF",
+			"CUP_B_Ural_CDF",
+			"CUP_B_MTVR_USMC",
+			"CUP_C_V3S_Covered_TKC"
 		};
 	};
 
@@ -1798,6 +1817,7 @@ class CfgTraderCategories
 			"CUP_O_UAZ_MG_CHDKZ",
 			"CUP_B_LR_MG_CZ_W",
 			"CUP_B_HMMWV_M1114_USMC",
+			"CUP_O_BMP2_AMB_TKA",
 			"CUP_B_HMMWV_DSHKM_GPK_ACR"
 		};
 	};
@@ -1849,7 +1869,10 @@ class CfgTraderCategories
 			"5Rnd_127x108_Mag",
 			"7Rnd_408_Mag",
 			"150Rnd_93x64_Mag",
-			"130Rnd_338_Mag"
+			"130Rnd_338_Mag",
+			"RPG7_F",
+			"RPG32_F",
+			"RPG32_HE_F"
 		};
 	};
 
