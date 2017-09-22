@@ -552,7 +552,7 @@ class CfgSettings
 			to try to shutdown the server
 		*/
 
-		useShutdown = 0;
+		useShutdown = 1;
 	};
 
 	class ServerSettings
