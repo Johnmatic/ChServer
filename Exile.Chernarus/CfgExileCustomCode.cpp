@@ -30,7 +30,7 @@ class CfgExileCustomCode
 	ExileServer_object_vehicle_createNonPersistentVehicle = "Exile_Server_Overrides\ExileServer_object_vehicle_createNonPersistentVehicle.sqf";
 	ExileServer_object_player_event_onMpKilled = "Exile_Server_Overrides\ExileServer_object_player_event_onMpKilled.sqf";
 	ExileServer_object_player_database_load = "Exile_Server_Overrides\ExileServer_object_player_database_load.sqf";
-	ExileServer_object_player_createBambi = "Exile_Server_Overrides\ExileServer_object_player_createBambi.sqf";
+	//ExileServer_object_player_createBambi = "Exile_Server_Overrides\ExileServer_object_player_createBambi.sqf";
 	ExileServer_object_container_database_update = "Exile_Server_Overrides\ExileServer_object_container_database_update.sqf";
 	ExileServer_object_container_database_load = "Exile_Server_Overrides\ExileServer_object_container_database_load.sqf";
 	ExileServer_object_container_database_insert = "Exile_Server_Overrides\ExileServer_object_container_database_insert.sqf";
@@ -42,6 +42,13 @@ class CfgExileCustomCode
 	ExileServer_system_territory_database_load = "ExAdClient\VirtualGarage\CustomCode\ExileServer_system_territory_database_load.sqf";
 	ExileClient_gui_xm8_slide = "ExAdClient\XM8\CustomCode\ExileClient_gui_xm8_slide.sqf";
 	ExileClient_gui_xm8_show = "ExAdClient\XM8\CustomCode\ExileClient_gui_xm8_show.sqf";
+
+	//Spawn Selection by bambam
+	ExileClient_gui_selectSpawnLocation_event_onSpawnButtonClick = "xs\spawn\Overwrites\ExileClient_gui_selectSpawnLocation_event_onSpawnButtonClick.sqf";
+	ExileClient_gui_selectSpawnLocation_show = "xs\spawn\Overwrites\ExileClient_gui_selectSpawnLocation_show.sqf";
+	ExileClient_gui_selectSpawnLocation_zoomToMarker = "xs\spawn\Overwrites\ExileClient_gui_selectSpawnLocation_zoomToMarker.sqf";
+	ExileClient_gui_selectSpawnLocation_event_onListBoxSelectionChanged = "xs\spawn\Overwrites\ExileClient_gui_selectSpawnLocation_event_onListBoxSelectionChanged.sqf";
+	ExileServer_object_player_createBambi = "xs\spawn\Overwrites\ExileServer_object_player_createBambi.sqf";
 
 	//custom
 	ExileClient_util_gear_calculateSellPrice = "Exile_Client_Overrides\ExileClient_util_gear_calculateSellPrice.sqf";

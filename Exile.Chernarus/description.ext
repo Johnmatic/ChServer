@@ -111,3 +111,6 @@ class CfgRemoteExec
 		jip = 0;
     };
 };
+
+#include "xs\spawn\Dialog\xsSpawnDefines.hpp"
+#include "xs\spawn\Dialog\xsSpawnDiaglog.hpp"
