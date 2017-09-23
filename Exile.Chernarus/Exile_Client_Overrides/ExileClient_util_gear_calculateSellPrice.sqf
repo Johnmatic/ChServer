@@ -12,13 +12,17 @@
 private["_className", "_amount"];
 _className = _this;
 _amount = 0;
-
-_amount = getNumber (missionConfigFile >> "CfgExileArsenal" >> _className >> "sellPrice");
-
-if (_amount == 0) then 
+if(!isNull (missionConfigFile >> "CfgExileArsenal" >> _className >> "sellPrice"))then
 {
-	_amount = getNumber (missionConfigFile >> "CfgExileArsenal" >> _className >> "price");
-	_amount = _amount * (getNumber (missionConfigFile >> "CfgTrading" >> "sellPriceFactor"));
-	_amount = (floor _amount) max 1;
+	_amount = getNumber (missionConfigFile >> "CfgExileArsenal" >> _className >> "sellPrice");
+}
+else 
+{
+	if(!isNull (missionConfigFile >> "CfgExileArsenal" >> _className >> "price")) then
+	{
+		_amount = getNumber (missionConfigFile >> "CfgExileArsenal" >> _className >> "price");
+		_amount = _amount * (getNumber (missionConfigFile >> "CfgTrading" >> "sellPriceFactor"));
+		_amount = (floor _amount) max 1;
+	};
 };
 _amount
