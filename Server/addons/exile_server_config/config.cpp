@@ -416,7 +416,7 @@ class CfgSettings
 			Add the keyframes here. The server will pick one random, so if you want one 
 			weather type of be more dominant compared to others, add it multiple times
 		*/
-		keyframes[] = { "Sunny", "Sunny", "Sunny", "Sunny", "Sunny", "Cloudy", "Cloudy", "Thunderstorm" };
+		keyframes[] = { "Sunny", "Sunny", "Sunny", "Sunny", "Sunny", "Windy", "Windy", , "Windy", "Cloudy", "Cloudy", "Thunderstorm" };
 		//keyframes[] = {"Sunny"}; 
 
 		/*
@@ -436,44 +436,61 @@ class CfgSettings
 		*/
 		class Sunny
 		{
-			fogValue = 0.1;
-			fogDecay = 0.2;
-			fogBase = 0;
-			overcast = 0.2;
-			waves = 0.2;
-			wind = 0.25;
-			gusts = 0.1;
+			fogValue = 0;
+			fogDecay = 0;
+			fogBase = -1000;
+			overcast = 0;
+			waves = 0.1;
+			wind = 0;
+			gusts = 0;
 			rain = 0;
-			lightnings = 0;
-			rainbows = 0;
+			lightnings = 0.000159074;
+			rainbows = 0.35;
+
 		};
 
 		class Cloudy
 		{
-			fogValue = 0.2;
-			fogDecay = 0.1;
-			fogBase = 0;
-			overcast = 0.4;
-			waves = 0.4;
-			wind = 0.25;
-			gusts = 0.5;
-			rain = 0.1;
-			lightnings = 0.1;
+			fogValue = 0;
+			fogDecay = 0;
+			fogBase = -1000;
+			overcast = 1;
+			waves = 0.0509996;
+			wind = 0.182311;
+			gusts = 0.0339889;
+			rain = 0;
+			lightnings = 0.165238;
 			rainbows = 1;
+
 		};
 
 		class Thunderstorm
 		{
-			fogValue = 0.7;
-			fogDecay = 0.2;
-			fogBase = 0;
+			fogValue = 0;
+			fogDecay = 0;
+			fogBase = -1000;
 			overcast = 1;
 			waves = 1;
-			wind = 0.25;
-			gusts = 0.5;
-			rain = 1;
-			lightnings = 1;
-			rainbows = 0.5;
+			wind = 1;
+			gusts = 0.998474;
+			rain = 0.998474;
+			lightnings = 0.998625;
+			rainbows = 0.35;
+
+		};
+
+		class Windy
+		{
+			fogValue = 0;
+			fogDecay = 0;
+			fogBase = -1000;
+			overcast = 0.317858;
+			waves = 0.474585;
+			wind = 0.563538;
+			gusts = 0.66823;
+			rain = 0;
+			lightnings = 0.0257185;
+			rainbows = 0.35;
 		};
 	};
 
