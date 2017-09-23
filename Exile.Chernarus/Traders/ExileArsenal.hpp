@@ -2693,6 +2693,7 @@ class CfgExileArsenal
 	class CUP_B_HMMWV_Unarmed_USMC										{ quality = 1; price = LAND_VEHICLE + MILITARY; };
 	class CUP_B_HMMWV_M1114_USMC										{ quality = 5; price = LAND_VEHICLE + MILITARY + ARMED_762; sellPrice = 22000; };
 	class CUP_B_HMMWV_M2_GPK_ACR										{ quality = 4; price = LAND_VEHICLE + MILITARY + ARMED_50; sellPrice = 24000; };
+	class CUP_B_HMMWV_M2_GPK_USA										{ quality = 4; price = LAND_VEHICLE + MILITARY + ARMED_50; sellPrice = 24000; };
 	class CUP_B_HMMWV_DSHKM_GPK_ACR										{ quality = 4; price = LAND_VEHICLE + MILITARY + ARMED_50; sellPrice = 20000; };
 	class CUP_B_HMMWV_Crows_M2_USA										{ quality = 5; price = LAND_VEHICLE + MILITARY + ARMED_50; sellPrice = 26000; }; //Not this one
 	class CUP_B_Dingo_GER_Wdl											{ quality = 5; price = 115000; }; //Not this one
