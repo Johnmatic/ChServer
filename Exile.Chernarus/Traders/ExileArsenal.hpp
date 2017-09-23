@@ -18,6 +18,7 @@ class CfgExileArsenal
 #define LAUNCHER_AMMO 5000
 #define GL_AMMO_HE 500
 #define GL_AMMO_SMOKE 100
+#define AMMO_CAM 400
 
 #define GUN545_PRICE_BASE 700
 #define GUN556_PRICE_BASE 700
@@ -30,6 +31,7 @@ class CfgExileArsenal
 #define GUN127_PRICE_BASE 7000
 #define GUN_VINTOREZ 3000
 #define LAUNCHER_BOOM_BOOM 10000
+#define	GUN_AA12 7000
 
 #define GUN_SHORT -100
 #define GUN_SNIPER 500
@@ -41,6 +43,8 @@ class CfgExileArsenal
 #define GUN_IS_NERFED -700
 
 #define BLING_BLING 2000
+
+#define STATIC_GUN 5000
 
 #define LAND_VEHICLE 4000
 #define TRUCK 1000
@@ -557,16 +561,16 @@ class CfgExileArsenal
 	class V_RebreatherIR												{ quality = 1; price = 500; };
 
 	// Price for bullet cam magazines
-	class Exile_Magazine_5Rnd_127x108_Bullet_Cam_Mag					{ quality = 6; price = 200; };
-	class Exile_Magazine_10Rnd_93x64_DMR_05_Bullet_Cam_Mag				{ quality = 6; price = 120; };
-	class Exile_Magazine_7Rnd_408_Bullet_Cam_Mag						{ quality = 6; price = 200; };
-	class Exile_Magazine_10Rnd_338_Bullet_Cam_Mag						{ quality = 6; price = 120; };
-	class Exile_Magazine_5Rnd_127x108_APDS_Bullet_Cam_Mag				{ quality = 6; price = 500; };
+	class Exile_Magazine_5Rnd_127x108_Bullet_Cam_Mag					{ quality = 6; price = 5 * AMMO127_PRICE_PER_BULLET + AMMO_CAM; };
+	class Exile_Magazine_10Rnd_93x64_DMR_05_Bullet_Cam_Mag				{ quality = 6; price = 10 * AMMO93_PRICE_PER_BULLET + AMMO_CAM; };
+	class Exile_Magazine_7Rnd_408_Bullet_Cam_Mag						{ quality = 6; price = 7 * AMMO408_PRICE_PER_BULLET + AMMO_CAM; };
+	class Exile_Magazine_10Rnd_338_Bullet_Cam_Mag						{ quality = 6; price = 10 * AMMO338_PRICE_PER_BULLET + AMMO_CAM; };
+	class Exile_Magazine_5Rnd_127x108_APDS_Bullet_Cam_Mag				{ quality = 6; price = 5 * AMMO127_PRICE_PER_BULLET + AMMO_CAM + APDS_BONUS; };
 
 	///////// Rockets /////////
-	class RPG32_F														{ quality = 4; price = LAUNCHER_AMMO; sellPrice = LAUNCHER_AMMO; };
-	class RPG32_HE_F													{ quality = 4; price = LAUNCHER_AMMO; sellPrice = LAUNCHER_AMMO; };
-	class RPG7_F														{ quality = 4; price = LAUNCHER_AMMO; sellPrice = LAUNCHER_AMMO; };
+	class RPG32_F														{ quality = 5; price = LAUNCHER_AMMO; sellPrice = LAUNCHER_AMMO; };
+	class RPG32_HE_F													{ quality = 5; price = LAUNCHER_AMMO; sellPrice = LAUNCHER_AMMO; };
+	class RPG7_F														{ quality = 5; price = LAUNCHER_AMMO; sellPrice = LAUNCHER_AMMO; };
 
 	///////// Chemlights & Flares /////////
 	class Chemlight_blue												{ quality = 1; price = 15; };
@@ -712,8 +716,8 @@ class CfgExileArsenal
 	class hlc_GRD_yellow												{ quality = 1; price = 25; };*/
 
 	///////// Static MG /////////
-	class O_HMG_01_weapon_F 											{ quality = 4; price = 4000; };
-	class O_HMG_01_support_F 											{ quality = 4; price = 750; };
+	class O_HMG_01_weapon_F 											{ quality = 5; price = STATIC_GUN; };
+	class O_HMG_01_support_F 											{ quality = 5; price = STATIC_GUN / 10; };
 
 	///////// Pistols /////////
 	class hgun_Pistol_Signal_F											{ quality = 1; price = 150; };
@@ -791,11 +795,11 @@ class CfgExileArsenal
 	class LMG_03_F														{ quality = 2; price = GUN556_PRICE_BASE + GUN_MG; };
 	class LMG_Mk200_F													{ quality = 2; price = GUN65_PRICE_BASE + GUN_MG; };
 	class LMG_Zafir_F													{ quality = 2; price = GUN762_PRICE_BASE + GUN_MG; };
-	class MMG_01_hex_F													{ quality = 3; price = GUN93_PRICE_BASE + GUN_MG; };
-	class MMG_01_tan_F													{ quality = 3; price = GUN93_PRICE_BASE + GUN_MG; };
-	class MMG_02_black_F												{ quality = 3; price = GUN338_PRICE_BASE + GUN_MG; };
-	class MMG_02_camo_F													{ quality = 3; price = GUN338_PRICE_BASE + GUN_MG; };
-	class MMG_02_sand_F													{ quality = 3; price = GUN338_PRICE_BASE + GUN_MG; };
+	class MMG_01_hex_F													{ quality = 4; price = GUN93_PRICE_BASE + GUN_MG; };
+	class MMG_01_tan_F													{ quality = 4; price = GUN93_PRICE_BASE + GUN_MG; };
+	class MMG_02_black_F												{ quality = 4; price = GUN338_PRICE_BASE + GUN_MG; };
+	class MMG_02_camo_F													{ quality = 4; price = GUN338_PRICE_BASE + GUN_MG; };
+	class MMG_02_sand_F													{ quality = 4; price = GUN338_PRICE_BASE + GUN_MG; };
 
 	///////// Sniper Rifles /////////
 	class arifle_MXM_Black_F 											{ quality = 1; price = GUN65_PRICE_BASE + GUN_SNIPER; };
@@ -821,17 +825,17 @@ class CfgExileArsenal
 	class srifle_DMR_07_ghex_F											{ quality = 2; price = GUN65_PRICE_BASE + GUN_SNIPER; };
 	class srifle_DMR_07_hex_F											{ quality = 2; price = GUN65_PRICE_BASE + GUN_SNIPER; };
 	class srifle_EBR_F 													{ quality = 2; price = GUN762_PRICE_BASE + GUN_SNIPER; };
-	class srifle_GM6_camo_F 											{ quality = 3; price = GUN127_PRICE_BASE + GUN_SNIPER; };
-	class srifle_GM6_F 													{ quality = 3; price = GUN127_PRICE_BASE + GUN_SNIPER; };
-	class srifle_GM6_ghex_F 											{ quality = 3; price = GUN127_PRICE_BASE + GUN_SNIPER; };
-	class srifle_LRR_camo_F 											{ quality = 3; price = GUN408_PRICE_BASE + GUN_SNIPER; };
-	class srifle_LRR_F 													{ quality = 3; price = GUN408_PRICE_BASE + GUN_SNIPER; };
-	class srifle_LRR_tna_F 												{ quality = 3; price = GUN408_PRICE_BASE + GUN_SNIPER; };
+	class srifle_GM6_camo_F 											{ quality = 5; price = GUN127_PRICE_BASE + GUN_SNIPER; };
+	class srifle_GM6_F 													{ quality = 5; price = GUN127_PRICE_BASE + GUN_SNIPER; };
+	class srifle_GM6_ghex_F 											{ quality = 5; price = GUN127_PRICE_BASE + GUN_SNIPER; };
+	class srifle_LRR_camo_F 											{ quality = 5; price = GUN408_PRICE_BASE + GUN_SNIPER; };
+	class srifle_LRR_F 													{ quality = 5; price = GUN408_PRICE_BASE + GUN_SNIPER; };
+	class srifle_LRR_tna_F 												{ quality = 5; price = GUN408_PRICE_BASE + GUN_SNIPER; };
 
 	///////// Launchers /////////
-	class launch_RPG7_F													{ quality = 4; price = LAUNCHER_BOOM_BOOM; };
-	class launch_RPG32_F												{ quality = 4; price = LAUNCHER_BOOM_BOOM; };
-	class launch_RPG32_ghex_F											{ quality = 4; price = LAUNCHER_BOOM_BOOM; };
+	class launch_RPG7_F													{ quality = 5; price = LAUNCHER_BOOM_BOOM; };
+	class launch_RPG32_F												{ quality = 5; price = LAUNCHER_BOOM_BOOM; };
+	class launch_RPG32_ghex_F											{ quality = 5; price = LAUNCHER_BOOM_BOOM; };
 
 	//////// Ammo ///////////
 	class 6Rnd_GreenSignal_F											{ quality = 1; price = 10; };
@@ -909,7 +913,7 @@ class CfgExileArsenal
 	class Exile_Weapon_AK47												{ quality = 2; price = GUN762_PRICE_BASE; };
 	class Exile_Weapon_AKM												{ quality = 2; price = GUN762_PRICE_BASE; };
 	class Exile_Weapon_AKS												{ quality = 2; price = GUN762_PRICE_BASE; };
-	class Exile_Weapon_AKS_Gold											{ quality = 2; price = GUN762_PRICE_BASE + BLING_BLING; sellprice = price / 2; };
+	class Exile_Weapon_AKS_Gold											{ quality = 2; price = GUN762_PRICE_BASE + BLING_BLING; };
 	class Exile_Weapon_DMR												{ quality = 3; price = GUN762_PRICE_BASE + GUN_SNIPER; };
 	class Exile_Weapon_LeeEnfield										{ quality = 1; price = 250; };//lel
 	class Exile_Weapon_CZ550											{ quality = 2; price = 400; };//lel2
@@ -1166,11 +1170,11 @@ class CfgExileArsenal
 
 	///////// Muzzle Attachments /////////
 	class muzzle_snds_acp 												{ quality = 1; price = 150; sellPrice = 30; };
-	class muzzle_snds_338_black 										{ quality = 3; price = SILENCER; };
-	class muzzle_snds_338_green 										{ quality = 3; price = SILENCER; };
-	class muzzle_snds_338_sand 											{ quality = 3; price = SILENCER; };
-	class muzzle_snds_93mmg 											{ quality = 3; price = SILENCER; };
-	class muzzle_snds_93mmg_tan 										{ quality = 3; price = SILENCER; };
+	class muzzle_snds_338_black 										{ quality = 4; price = SILENCER; };
+	class muzzle_snds_338_green 										{ quality = 4; price = SILENCER; };
+	class muzzle_snds_338_sand 											{ quality = 4; price = SILENCER; };
+	class muzzle_snds_93mmg 											{ quality = 4; price = SILENCER; };
+	class muzzle_snds_93mmg_tan 										{ quality = 4; price = SILENCER; };
 	class muzzle_snds_58_blk_F											{ quality = 1; price = SILENCER; };
 	class muzzle_snds_58_wdm_F											{ quality = 1; price = SILENCER; };
 	class muzzle_snds_B 												{ quality = 2; price = SILENCER; };
@@ -1545,7 +1549,7 @@ class CfgExileArsenal
 	class CUP_lmg_M249_para												{ quality = 1; price = GUN556_PRICE_BASE + GUN_MG; };
 	class CUP_lmg_M249													{ quality = 1; price = GUN556_PRICE_BASE + GUN_MG; };
 	class CUP_lmg_M240													{ quality = 2; price = GUN762_PRICE_BASE + GUN_MG; };
-	class CUP_lmg_M60E4													{ quality = 2; price = GUN762_PRICE_BASE + GUN_MG; };
+	class CUP_lmg_M60E4													{ quality = 3; price = GUN762_PRICE_BASE + GUN_MG; };
 	class CUP_lmg_Mk48_des												{ quality = 3; price = GUN762_PRICE_BASE + GUN_MG; };
 	class CUP_lmg_Mk48_wdl												{ quality = 3; price = GUN762_PRICE_BASE + GUN_MG; };
 	////////////////////////////////////////////////////////////////////////////////////////////
@@ -1636,7 +1640,7 @@ class CfgExileArsenal
 	////////////////////////////////////////////////////////////////////////////////////////////
 	// CUP Shotguns ////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////////////////////
-	class CUP_sgun_AA12													{ quality = 3; price = 1200; };
+	class CUP_sgun_AA12													{ quality = 5; price = GUN_AA12; };
 	class CUP_sgun_M1014												{ quality = 1; price = 200; };
 	class CUP_sgun_Saiga12K												{ quality = 1; price = 300; };
 	////////////////////////////////////////////////////////////////////////////////////////////
