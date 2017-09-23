@@ -22,7 +22,7 @@ else
 {
 	if(_useRealTime isEqualTo 1)then
 	{
-		setDate ExileServerStartTime;
+		setDate [ExileServerStartTime select 0, ExileServerStartTime select 1, ExileServerStartTime select 2, ExileServerStartTime select 3, ExileServerStartTime select 4];
 	};
 };
 forceWeatherChange;
