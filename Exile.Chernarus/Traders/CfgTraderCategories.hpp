@@ -773,8 +773,6 @@ class CfgTraderCategories
 			"NVGoggles_INDEP",
 			"NVGoggles_OPFOR",
 			"NVGoggles_tna_F",
-			"CUP_H_RUS_6B27_NVG_olive",
-			"CUP_H_RUS_6B27_NVG",
 			"O_NVGoggles_hex_F",
 			"O_NVGoggles_urb_F",
 			"O_NVGoggles_ghex_F",
@@ -1570,7 +1568,6 @@ class CfgTraderCategories
 			"Exile_Car_Offroad_Rusty2",
 			"Exile_Car_Offroad_Rusty3",
 			"Exile_Car_Offroad_Repair_Civillian",
-			"Exile_Car_Offroad_Armed_Guerilla01",
 			"Exile_Car_BTR40_Green",
 			"Exile_Car_HMMWV_MEV_Green",
 			"Exile_Car_HMMWV_UNA_Green",
@@ -1606,8 +1603,7 @@ class CfgTraderCategories
 			"CUP_C_Golf4_kitty_Civ",
 			"CUP_C_Golf4_camodark_Civ",
 			"CUP_C_Golf4_reptile_Civ",
-			"CUP_M1030",
-			"CUP_B_M1133_MEV_Woodland"
+			"CUP_M1030"
 		};
 	};
 
@@ -1794,11 +1790,16 @@ class CfgTraderCategories
 			"B_MRAP_01_hmg_F",
 			"O_MRAP_02_hmg_F",
 			"I_MRAP_03_hmg_F",
+			"O_T_LSV_02_armed_F",
+			"O_T_MRAP_02_hmg_ghex_F",
 			"Exile_Car_BTR40_MG_Green",
+			"Exile_Car_BTR40_MG_Camo",
 			"Exile_Car_HMMWV_M134_Green",
+			"Exile_Car_HMMWV_M134_Desert",
 			"Exile_Car_HMMWV_M2_Green",
-			"Exile_Car_SUV_Armed_Black",
-			"Exile_Car_BRDM2_HQ"
+			"Exile_Car_HMMWV_M2_Desert",
+			"Exile_Car_SUV_Armed_Black"
+			//"Exile_Car_BRDM2_HQ" //too damn fast
 		};
 	};
 
@@ -1816,7 +1817,8 @@ class CfgTraderCategories
 			"CUP_B_LR_MG_CZ_W",
 			"CUP_B_HMMWV_M1114_USMC",
 			"CUP_O_BMP2_AMB_TKA",
-			"CUP_B_HMMWV_DSHKM_GPK_ACR"
+			"CUP_B_HMMWV_DSHKM_GPK_ACR",
+			"CUP_B_M1133_MEV_Woodland"
 		};
 	};
 

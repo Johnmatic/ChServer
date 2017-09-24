@@ -53,16 +53,17 @@ class CfgExileArsenal
 #define AIR_VEHICLE 10000
 #define VERTICAL_LANDING 10000
 
-#define ARMED_50 5000
-#define ARMED_762 3000
-#define ARMED_65 3000
-#define ARMED_GMG 10000
-#define HIDE_YOUR_GUNNER 10000
-#define I_CAN_SEE_GUNNER -5000
+#define ARMED_50 12000
+#define ARMED_762 5000
+#define MINIGUN 5000
+#define ARMED_65 5000
+#define ARMED_GMG 13000
+#define HIDE_YOUR_GUNNER 15000
+#define I_CAN_SEE_GUNNER -3000
 #define HAS_LASER 2000
 
-#define REALLY_TOUGH_ONE 10000
-#define TOUGH_ONE 5000
+#define REALLY_TOUGH_ONE 12000
+#define TOUGH_ONE 7000
 #define MILITARY 3000
 
 #define FAST 5000
@@ -2190,13 +2191,8 @@ class CfgExileArsenal
 	/////////////////////////////////////////////////////////////////////////////////////////////
 	
 	/////////////////////////////////////////////////////////////////////////////////////////////
-	////// M1133 /////////////////////////////////////////////////////////////////////
-	/////////////////////////////////////////////////////////////////////////////////////////////
-	class CUP_B_M1133_MEV_Woodland										{ quality = 2; price = LAND_VEHICLE + TOUGH_ONE + FAST; };
-	/////////////////////////////////////////////////////////////////////////////////////////////
 	////// BMP-2 /////////////////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////////////////////////////////////////
-	class CUP_O_BMP2_AMB_TKA											{ quality = 2; price = LAND_VEHICLE + REALLY_TOUGH_ONE + TRACKED; };
 	class CUP_O_BMP_HQ_TKA												{ quality = 2; price = LAND_VEHICLE + REALLY_TOUGH_ONE + TRACKED + ARMED_762; };
 	/////////////////////////////////////////////////////////////////////////////////////////////
 	////// Wolfhound /////////////////////////////////////////////////////////////////////
@@ -2482,19 +2478,19 @@ class CfgExileArsenal
 	class Exile_Car_Offroad_Armed_Guerilla10 							{ quality = 2; price = 12500; };
 	class Exile_Car_Offroad_Armed_Guerilla11 							{ quality = 2; price = 12500; };
 	class Exile_Car_Offroad_Armed_Guerilla12 							{ quality = 2; price = 12500; };
-	class Exile_Car_HMMWV_M2_Green 										{ quality = 3; price = 30000; };
-	class Exile_Car_HMMWV_M2_Desert 									{ quality = 3; price = 30000; };
-	class Exile_Car_HMMWV_M134_Green 									{ quality = 3; price = 35000; };
-	class Exile_Car_HMMWV_M134_Desert 									{ quality = 3; price = 35000; };
-	class Exile_Car_BTR40_MG_Green										{ quality = 3; price = 30000; };
-	class Exile_Car_BTR40_MG_Camo										{ quality = 3; price = 30000; };
-	class Exile_Car_SUV_Armed_Black										{ quality = 3; price = 45000; sellPrice = 20000; };
-	class Exile_Car_BRDM2_HQ											{ quality = 3; price = 40000; sellPrice = 20000; };
-	class B_MRAP_01_hmg_F												{ quality = 3; price = 40000; sellPrice = 20000; };
-	class O_MRAP_02_hmg_F												{ quality = 3; price = 60000; sellPrice = 20000; };
-	class O_T_MRAP_02_hmg_ghex_F										{ quality = 3; price = 60000; sellPrice = 20000; };
-	class I_MRAP_03_hmg_F												{ quality = 3; price = 80000; sellPrice = 20000; };
-	class O_T_LSV_02_armed_F											{ quality = 3; price = 50000; sellPrice = 20000; };
+	class Exile_Car_HMMWV_M2_Green 										{ quality = 3; price = LAND_VEHICLE + MILITARY + ARMED_50 + I_CAN_SEE_GUNNER + FAST; };
+	class Exile_Car_HMMWV_M2_Desert 									{ quality = 3; price = LAND_VEHICLE + MILITARY + ARMED_50 + I_CAN_SEE_GUNNER + FAST; };
+	class Exile_Car_HMMWV_M134_Green 									{ quality = 2; price = LAND_VEHICLE + MILITARY + MINIGUN + ARMED_762 + I_CAN_SEE_GUNNER + FAST; };
+	class Exile_Car_HMMWV_M134_Desert 									{ quality = 2; price = LAND_VEHICLE + MILITARY + MINIGUN + ARMED_762 + I_CAN_SEE_GUNNER + FAST; };
+	class Exile_Car_BTR40_MG_Green										{ quality = 4; price = LAND_VEHICLE + TOUGH_ONE + ARMED_50 + I_CAN_SEE_GUNNER + FAST; };
+	class Exile_Car_BTR40_MG_Camo										{ quality = 4; price = LAND_VEHICLE + TOUGH_ONE + ARMED_50 + I_CAN_SEE_GUNNER + FAST; };
+	class Exile_Car_SUV_Armed_Black										{ quality = 3; price = LAND_VEHICLE + MILITARY + MINIGUN + ARMED_762 + I_CAN_SEE_GUNNER + FAST + FAST + FAST; };
+	class Exile_Car_BRDM2_HQ											{ quality = 4; price = 40000; };//too fast
+	class B_MRAP_01_hmg_F												{ quality = 5; price = LAND_VEHICLE + TOUGH_ONE + ARMED_50 + HIDE_YOUR_GUNNER + FAST; };
+	class O_MRAP_02_hmg_F												{ quality = 5; price = LAND_VEHICLE + TOUGH_ONE + ARMED_50 + HIDE_YOUR_GUNNER + FAST; };
+	class O_T_MRAP_02_hmg_ghex_F										{ quality = 5; price = LAND_VEHICLE + TOUGH_ONE + ARMED_50 + HIDE_YOUR_GUNNER + FAST; };
+	class I_MRAP_03_hmg_F												{ quality = 5; price = LAND_VEHICLE + TOUGH_ONE + ARMED_50 + HIDE_YOUR_GUNNER + FAST; };
+	class O_T_LSV_02_armed_F											{ quality = 3; price = LAND_VEHICLE + MINIGUN + ARMED_762 + I_CAN_SEE_GUNNER + FAST; };
 
 	///////// Military Medical /////////
 	class B_Truck_01_medical_F											{ quality = 1; price = LAND_VEHICLE + MILITARY; };
@@ -2535,12 +2531,12 @@ class CfgExileArsenal
 	class Exile_Car_Volha_Blue											{ quality = 1; price = 3000; };
 	class Exile_Car_Volha_White											{ quality = 1; price = 3000; };
 	class Exile_Car_Volha_Black											{ quality = 1; price = 3000; };
-	class Exile_Car_Hatchback_Sport_Red									{ quality = 1; price = 10000; };
-	class Exile_Car_Hatchback_Sport_Blue								{ quality = 1; price = 10000; };
-	class Exile_Car_Hatchback_Sport_Orange								{ quality = 1; price = 10000; };
-	class Exile_Car_Hatchback_Sport_White								{ quality = 1; price = 10000; };
-	class Exile_Car_Hatchback_Sport_Beige								{ quality = 1; price = 10000; };
-	class Exile_Car_Hatchback_Sport_Green								{ quality = 1; price = 10000; };
+	class Exile_Car_Hatchback_Sport_Red									{ quality = 3; price = LAND_VEHICLE + FAST + FAST + FAST; };
+	class Exile_Car_Hatchback_Sport_Blue								{ quality = 3; price = LAND_VEHICLE + FAST + FAST + FAST; };
+	class Exile_Car_Hatchback_Sport_Orange								{ quality = 3; price = LAND_VEHICLE + FAST + FAST + FAST; };
+	class Exile_Car_Hatchback_Sport_White								{ quality = 3; price = LAND_VEHICLE + FAST + FAST + FAST; };
+	class Exile_Car_Hatchback_Sport_Beige								{ quality = 3; price = LAND_VEHICLE + FAST + FAST + FAST; };
+	class Exile_Car_Hatchback_Sport_Green								{ quality = 3; price = LAND_VEHICLE + FAST + FAST + FAST; };
 	class Exile_Car_Offroad_Red											{ quality = 1; price = 5000; };
 	class Exile_Car_Offroad_Beige										{ quality = 1; price = 5000; };
 	class Exile_Car_Offroad_White										{ quality = 1; price = 5000; };
@@ -2593,13 +2589,13 @@ class CfgExileArsenal
 
 	///////// Civilian CUP /////////
 	class CUP_M1030														{ quality = 1; price = 1200; };
-	class CUP_C_Golf4_random_Civ										{ quality = 1; price = LAND_VEHICLE; };
-	class CUP_C_Golf4_crowe_Civ											{ quality = 1; price = LAND_VEHICLE; };
-	class CUP_C_Golf4_whiteblood_Civ									{ quality = 1; price = LAND_VEHICLE; };
-	class CUP_C_Golf4_camodigital_Civ									{ quality = 1; price = LAND_VEHICLE; };
-	class CUP_C_Golf4_kitty_Civ											{ quality = 1; price = LAND_VEHICLE; };
-	class CUP_C_Golf4_camodark_Civ										{ quality = 1; price = LAND_VEHICLE; };
-	class CUP_C_Golf4_reptile_Civ										{ quality = 1; price = LAND_VEHICLE; };
+	class CUP_C_Golf4_random_Civ										{ quality = 3; price = LAND_VEHICLE + FAST + FAST + FAST; };
+	class CUP_C_Golf4_crowe_Civ											{ quality = 3; price = LAND_VEHICLE + FAST + FAST + FAST; };
+	class CUP_C_Golf4_whiteblood_Civ									{ quality = 3; price = LAND_VEHICLE + FAST + FAST + FAST; };
+	class CUP_C_Golf4_camodigital_Civ									{ quality = 3; price = LAND_VEHICLE + FAST + FAST + FAST; };
+	class CUP_C_Golf4_kitty_Civ											{ quality = 3; price = LAND_VEHICLE + FAST + FAST + FAST; };
+	class CUP_C_Golf4_camodark_Civ										{ quality = 3; price = LAND_VEHICLE + FAST + FAST + FAST; };
+	class CUP_C_Golf4_reptile_Civ										{ quality = 3; price = LAND_VEHICLE + FAST + FAST + FAST; };
 	class CUP_C_Octavia_CIV												{ quality = 1; price = LAND_VEHICLE + FAST; };
 	class CUP_C_Datsun_Plain											{ quality = 1; price = LAND_VEHICLE; };
 	class CUP_C_Datsun_Covered											{ quality = 1; price = LAND_VEHICLE; };
@@ -2670,22 +2666,22 @@ class CfgExileArsenal
 	class CUP_B_MTVR_Ammo_USA											{ quality = 2; price = LAND_VEHICLE + MILITARY + TRUCK + REAMMO; };
 
 	/////////TRUCKS FUEL/////////
-	class Exile_Car_Van_Fuel_Black 										{ quality = 1; price = LAND_VEHICLE + MILITARY + TRUCK + REFUEL; };
-	class Exile_Car_Van_Fuel_White 										{ quality = 1; price = LAND_VEHICLE + MILITARY + TRUCK + REFUEL; };
-	class Exile_Car_Van_Fuel_Red 										{ quality = 1; price = LAND_VEHICLE + MILITARY + TRUCK + REFUEL; };
-	class Exile_Car_Van_Fuel_Guerilla01 								{ quality = 1; price = LAND_VEHICLE + MILITARY + TRUCK + REFUEL; };
-	class Exile_Car_Van_Fuel_Guerilla02 								{ quality = 1; price = LAND_VEHICLE + MILITARY + TRUCK + REFUEL; };
-	class Exile_Car_Van_Fuel_Guerilla03 								{ quality = 1; price = LAND_VEHICLE + MILITARY + TRUCK + REFUEL; };
-	class CUP_B_Ural_Refuel_CDF											{ quality = 1; price = LAND_VEHICLE + MILITARY + TRUCK + REFUEL; };
-	class CUP_B_MTVR_Refuel_USA											{ quality = 1; price = LAND_VEHICLE + MILITARY + TRUCK + REFUEL; };
-	class CUP_B_MTVR_Refuel_USMC										{ quality = 1; price = LAND_VEHICLE + MILITARY + TRUCK + REFUEL; };
+	class Exile_Car_Van_Fuel_Black 										{ quality = 2; price = LAND_VEHICLE + MILITARY + TRUCK + REFUEL; };
+	class Exile_Car_Van_Fuel_White 										{ quality = 2; price = LAND_VEHICLE + MILITARY + TRUCK + REFUEL; };
+	class Exile_Car_Van_Fuel_Red 										{ quality = 2; price = LAND_VEHICLE + MILITARY + TRUCK + REFUEL; };
+	class Exile_Car_Van_Fuel_Guerilla01 								{ quality = 2; price = LAND_VEHICLE + MILITARY + TRUCK + REFUEL; };
+	class Exile_Car_Van_Fuel_Guerilla02 								{ quality = 2; price = LAND_VEHICLE + MILITARY + TRUCK + REFUEL; };
+	class Exile_Car_Van_Fuel_Guerilla03 								{ quality = 2; price = LAND_VEHICLE + MILITARY + TRUCK + REFUEL; };
+	class CUP_B_Ural_Refuel_CDF											{ quality = 2; price = LAND_VEHICLE + MILITARY + TRUCK + REFUEL; };
+	class CUP_B_MTVR_Refuel_USA											{ quality = 2; price = LAND_VEHICLE + MILITARY + TRUCK + REFUEL; };
+	class CUP_B_MTVR_Refuel_USMC										{ quality = 2; price = LAND_VEHICLE + MILITARY + TRUCK + REFUEL; };
 
 
-	///// Dirt Bike ////////////////////////////////////////////////////////////////////////////
+	///// CUP ARMED ////////////////////////////////////////////////////////////////////////////
 	////////////////////////////////////////////////////////////////////////////////////////////
 
 	class CUP_O_Datsun_PK												{ quality = 2; price = LAND_VEHICLE + ARMED_762; };
-	class CUP_B_LR_MG_CZ_W												{ quality = 3; price = LAND_VEHICLE + ARMED_762; };
+	
 	class CUP_B_LR_Special_M2_GB_W										{ quality = 5; price = LAND_VEHICLE + ARMED_50 + ARMED_GMG; };
 	class CUP_O_LR_SPG9_TKM												{ quality = 5; price = 70000; }; //Not this one
 	class CUP_B_Jackal2_L2A1_GB_W										{ quality = 5; price = LAND_VEHICLE + MILITARY + ARMED_50 + ARMED_762; };
@@ -2694,25 +2690,29 @@ class CfgExileArsenal
 	class CUP_B_Mastiff_HMG_GB_W										{ quality = 5; price = LAND_VEHICLE + TOUGH_ONE + ARMED_50; };
 	class CUP_B_Ridgback_HMG_GB_W										{ quality = 5; price = LAND_VEHICLE + TOUGH_ONE + ARMED_50; };
 	class CUP_B_HMMWV_Unarmed_USMC										{ quality = 1; price = LAND_VEHICLE + MILITARY; };
-	class CUP_B_HMMWV_M1114_USMC										{ quality = 5; price = LAND_VEHICLE + MILITARY + ARMED_762; };
-	class CUP_B_HMMWV_M2_GPK_ACR										{ quality = 4; price = LAND_VEHICLE + MILITARY + ARMED_50; };
-	class CUP_B_HMMWV_M2_GPK_USA										{ quality = 4; price = LAND_VEHICLE + MILITARY + ARMED_50; };
-	class CUP_B_HMMWV_DSHKM_GPK_ACR										{ quality = 4; price = LAND_VEHICLE + MILITARY + ARMED_50; };
 	class CUP_B_HMMWV_Crows_M2_USA										{ quality = 5; price = LAND_VEHICLE + MILITARY + ARMED_50; }; //Not this one
 	class CUP_B_Dingo_GER_Wdl											{ quality = 5; price = 115000; }; //Not this one
-	class CUP_O_UAZ_MG_CHDKZ											{ quality = 3; price = LAND_VEHICLE + MILITARY + ARMED_50; };
 	class CUP_B_UAZ_SPG9_ACR											{ quality = 5; price = 9999999; }; //Not this one
 	class CUP_I_BTR40_MG_TKG											{ quality = 4; price = LAND_VEHICLE + TOUGH_ONE + ARMED_50; }; // Not this one
 	class CUP_I_BTR40_TKG												{ quality = 4; price = LAND_VEHICLE + TOUGH_ONE; }; // Not this one
 	class CUP_O_Gaz_Vodnik_MedEvac_RU									{ quality = 2; price = LAND_VEHICLE + TOUGH_ONE; };
 	class CUP_O_Gaz_Vodnik_PK_RU										{ quality = 4; price = LAND_VEHICLE + TOUGH_ONE + ARMED_762 + ARMED_762; };
+	class CUP_B_Mastiff_LMG_GB_W										{ quality = 1; price = LAND_VEHICLE + TOUGH_ONE + ARMED_762; };//
+	class CUP_B_Ridgback_LMG_GB_W										{ quality = 1; price = LAND_VEHICLE + TOUGH_ONE + ARMED_762; };//
+	class CUP_B_Wolfhound_LMG_GB_W										{ quality = 1; price = LAND_VEHICLE + TOUGH_ONE + ARMED_762; };//
+	
 
 	//Special
-	class CUP_B_BRDM2_HQ_CDF											{ quality = 1; price = LAND_VEHICLE + TOUGH_ONE + ARMED_762; };
-	class CUP_B_LR_Special_GMG_GB_D										{ quality = 1; price = LAND_VEHICLE + MILITARY + ARMED_762 + ARMED_GMG; };
-	class CUP_B_Mastiff_LMG_GB_W										{ quality = 1; price = LAND_VEHICLE + TOUGH_ONE + ARMED_762; };
-	class CUP_B_Ridgback_LMG_GB_W										{ quality = 1; price = LAND_VEHICLE + TOUGH_ONE + ARMED_762; };
-	class CUP_B_Wolfhound_LMG_GB_W										{ quality = 1; price = LAND_VEHICLE + TOUGH_ONE + ARMED_762; };
+	class CUP_O_UAZ_MG_CHDKZ											{ quality = 2; price = LAND_VEHICLE + ARMED_50 + I_CAN_SEE_GUNNER; };
+	class CUP_B_HMMWV_M1114_USMC										{ quality = 2; price = LAND_VEHICLE + MILITARY + ARMED_762; };
+	class CUP_B_LR_MG_CZ_W												{ quality = 3; price = LAND_VEHICLE + ARMED_50 + I_CAN_SEE_GUNNER + FAST; };
+	class CUP_B_BRDM2_HQ_CDF											{ quality = 4; price = LAND_VEHICLE + REALLY_TOUGH_ONE + ARMED_762 + I_CAN_SEE_GUNNER; };
+	class CUP_B_LR_Special_GMG_GB_D										{ quality = 4; price = LAND_VEHICLE + ARMED_762 + ARMED_GMG + I_CAN_SEE_GUNNER; };
+	class CUP_B_HMMWV_M2_GPK_ACR										{ quality = 4; price = LAND_VEHICLE + TOUGH_ONE + ARMED_50; };
+	class CUP_B_HMMWV_M2_GPK_USA										{ quality = 4; price = LAND_VEHICLE + TOUGH_ONE + ARMED_50; };
+	class CUP_B_HMMWV_DSHKM_GPK_ACR										{ quality = 4; price = LAND_VEHICLE + TOUGH_ONE + ARMED_50; };
+	class CUP_O_BMP2_AMB_TKA											{ quality = 4; price = LAND_VEHICLE + REALLY_TOUGH_ONE + TRACKED; };
+	class CUP_B_M1133_MEV_Woodland										{ quality = 4; price = LAND_VEHICLE + REALLY_TOUGH_ONE + FAST; };
 
 	//OMG!!
 	class Exile_Boat_RubberDuck_Abstract								{ quality = 5; price = 40000; sellprice = 40000; };
