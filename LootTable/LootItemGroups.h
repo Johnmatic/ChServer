@@ -1427,10 +1427,10 @@
  // Trash or items not currently being used
 
 > Trash
-1, Exile_Item_Magazine01					// NOT USABLE
-1, Exile_Item_Magazine02					// NOT USABLE
-1, Exile_Item_Magazine03					// NOT USABLE
-1, Exile_Item_Magazine04					// NOT USABLE
+0, Exile_Item_Magazine01					// NOT USABLE
+0, Exile_Item_Magazine02					// NOT USABLE
+0, Exile_Item_Magazine03					// NOT USABLE
+0, Exile_Item_Magazine04					// NOT USABLE
 4, Exile_Item_Can_Empty
 4, Exile_Item_PlasticBottleEmpty			// Nothing :)
 4, Exile_Item_ToiletPaper
