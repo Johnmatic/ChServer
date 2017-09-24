@@ -1,0 +1,14 @@
+//Traders
+wiadomo
+
+//flagi
+mozna budowac przy traderach ;o
+
+//mapa
+baza krasno
+baza nwa
+baza balota
+baza zielono
+baza botow (razem ze strefa zakazenia + statyczna misja )
+
+towing
