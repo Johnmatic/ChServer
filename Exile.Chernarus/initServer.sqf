@@ -256,3 +256,5 @@ private _simpleObjects = [
     forEach (selectionNames _simpleObject);
 }
 forEach _simpleObjects;
+
+call compile preprocessfilelinenumbers "SA_AdvancedTowing\functions\fn_advancedTowingInit.sqf";

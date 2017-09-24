@@ -9,6 +9,7 @@ baza krasno
 baza nwa
 baza balota
 baza zielono
+berezino z 3 budynki militarne
 baza botow (razem ze strefa zakazenia + statyczna misja )
 
 towing
