@@ -93,10 +93,8 @@ ZCP_Minimum_Online_Players = 0; // Amount of players to be online before it allo
 ZCP_MaxMissionsRelativeToPlayers = true; // ZCP_MaxMissions will be ignored if true. ZCP_RelativeMaxMissions will be used
 ZCP_RelativeMaxMissions = [
     //[ min players,  amount of cappoints],
-    [5, 1],
-    [15, 2],
-    [40, 3],
-    [65, 4]
+    [25, 1],
+    [25, 2]
 ];
 ZCP_SecondsCheckPlayers = 600; // seconds for loop check if the server holds more players now (and spawn extra cappoints). ( 600 = every 10 minuts)
 
@@ -188,77 +186,32 @@ ZCP_DMS_MinimumMagCount					= 2;						// Minimum number of magazines for weapons
 ZCP_DMS_MaximumMagCount					= 4;						// Maximum number of magazines for weapons.
 ZCP_DMS_CrateCase_Sniper =				DMS_CrateCase_Sniper;
 ZCP_DMS_BoxWeapons =					DMS_BoxWeapons;
-ZCP_DMS_BoxFood =						[							// List of food that can spawn in a crate.
-										"Exile_Item_GloriousKnakworst_Cooked",
-										"Exile_Item_Surstromming_Cooked",
-										"Exile_Item_SausageGravy_Cooked",
-										"Exile_Item_ChristmasTinner_Cooked",
-										"Exile_Item_BBQSandwich_Cooked",
-										"Exile_Item_Catfood_Cooked",
-										"Exile_Item_DogFood_Cooked"
-									];
-ZCP_DMS_BoxDrinks =						[
-										"Exile_Item_PlasticBottleCoffee",
-										"Exile_Item_PowerDrink",
-										"Exile_Item_PlasticBottleFreshWater",
-										"Exile_Item_EnergyDrink",
-										"Exile_Item_MountainDupe"
-									];
-ZCP_DMS_BoxMeds =						[
-										"Exile_Item_InstaDoc",
-										"Exile_Item_Vishpirin",
-										"Exile_Item_Bandage"
-									];
+ZCP_DMS_BoxFood =						DMS_BoxFood;
+ZCP_DMS_BoxDrinks =						DMS_BoxDrinks;
+ZCP_DMS_BoxMeds =						DMS_BoxMeds;
 ZCP_DMS_BoxSurvivalSupplies	=			[							//List of survival supplies (food/drink/meds) that can spawn in a crate. "ZCP_DMS_BoxFood", "ZCP_DMS_BoxDrinks", and "ZCP_DMS_BoxMeds" is automatically added to this list.
 										"Exile_Item_Matches",
 										"Exile_Item_CookingPot",
 										"Exile_Melee_Axe",
 										"Exile_Item_CanOpener"
 									] + ZCP_DMS_BoxFood + ZCP_DMS_BoxDrinks + ZCP_DMS_BoxMeds;
-ZCP_DMS_BoxBaseParts =					[
-										"Exile_Item_CamoTentKit",
-										"Exile_Item_WoodWallKit",
-										"Exile_Item_WoodWallHalfKit",
-										"Exile_Item_WoodDoorwayKit",
-										"Exile_Item_WoodDoorKit",
-										"Exile_Item_WoodFloorKit",
-										"Exile_Item_WoodFloorPortKit",
-										"Exile_Item_WoodStairsKit",
-										"Exile_Item_WoodSupportKit",
-										"Exile_Item_FortificationUpgrade"
-									];
-ZCP_DMS_Box_BaseParts_Concrete =			[							// List of concrete base parts
-										"Exile_Item_ConcreteWallKit",
-										"Exile_Item_ConcreteWindowKit",
-										"Exile_Item_ConcreteDoorKit",
-										"Exile_Item_ConcreteDoorwayKit",
-										"Exile_Item_ConcreteGateKit",
-										"Exile_Item_ConcreteFloorKit",
-										"Exile_Item_ConcreteFloorPortKit",
-										"Exile_Item_ConcreteStairsKit"
-									];
-ZCP_DMS_BoxCraftingMaterials =			[
-										"Exile_Item_MetalPole",
-										"Exile_Item_MetalBoard",
-										"Exile_Item_JunkMetal"
-									];
-ZCP_DMS_BoxTools =						[
-										"Exile_Item_Grinder",
-										"Exile_Item_Handsaw"
-									];
+ZCP_DMS_BoxBaseParts =					DMS_BoxBaseParts;
+ZCP_DMS_Box_BaseParts_Concrete =		DMS_Box_BaseParts_Concrete;
+ZCP_DMS_BoxCraftingMaterials =			DMS_BoxCraftingMaterials;
+ZCP_DMS_BoxTools =						DMS_BoxTools;
 ZCP_DMS_BoxBuildingSupplies	=			[							// List of building supplies that can spawn in a crate ("ZCP_DMS_BoxBaseParts", "ZCP_DMS_BoxCraftingMaterials", and "ZCP_DMS_BoxTools" are automatically added to this list. "ZCP_DMS_BoxCraftingMaterials" is added twice for weight.)
 										"Exile_Item_DuctTape",
 										"Exile_Item_PortableGeneratorKit"
 									] + ZCP_DMS_BoxBaseParts + ZCP_DMS_BoxCraftingMaterials + ZCP_DMS_BoxTools + ZCP_DMS_Box_BaseParts_Concrete + ZCP_DMS_Box_BaseParts_Concrete;
 ZCP_DMS_BoxOptics =						DMS_BoxOptics;
 ZCP_DMS_BoxBackpacks =					DMS_BoxBackpacks;
-ZCP_DMS_BoxItems						= ZCP_DMS_BoxSurvivalSupplies+ZCP_DMS_BoxBuildingSupplies+ZCP_DMS_BoxOptics;	// Random "items" can spawn optics, survival supplies, or building supplies
+ZCP_DMS_BoxItems =						ZCP_DMS_BoxSurvivalSupplies+ZCP_DMS_BoxBuildingSupplies+ZCP_DMS_BoxOptics;	// Random "items" can spawn optics, survival supplies, or building supplies
 
-ZCP_DMS_RareLoot						= true;						// Potential chance to spawn rare loot in any crate.
+ZCP_DMS_RareLoot =						true;						// Potential chance to spawn rare loot in any crate.
 ZCP_DMS_RareLootList =					DMS_RareLootList;
-ZCP_DMS_RareLootChance	= 30;						// Percentage Chance to spawn rare loot in any crate | Default: 10%
+ZCP_DMS_RareLootChance					= 30;						// Percentage Chance to spawn rare loot in any crate | Default: 10%
 
-// Vehicles
+// Vehiclesw
 ZCP_DMS_ArmedVehicles =					DMS_ArmedVehicles;
 
 ZCP_DMS_MilitaryVehicles =				DMS_MilitaryVehicles;

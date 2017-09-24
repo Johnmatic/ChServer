@@ -604,7 +604,7 @@ class CfgSettings
 		/*
 			A list of events that are active
 		*/
-		enabledEvents[] = {"SupplyBox", "AbandonedSafe", "AmbientFlyOver", "EarthQuake"}; 
+		enabledEvents[] = {"SupplyBox", "AbandonedSafe"}; 
 
 		class EarthQuake 
 		{

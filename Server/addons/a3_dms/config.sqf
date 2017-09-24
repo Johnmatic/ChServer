@@ -530,8 +530,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"Exile_Weapon_AK107",
 											"Exile_Weapon_AK107_GL",
 											"Exile_Weapon_AK74_GL",
-											"Exile_Weapon_AK47",
-											"Exile_Weapon_AKS_Gold"
+											"Exile_Weapon_AK47"
 										];
 	DMS_assault_pistols =				[							// Pistols for Assault Class (Set to empty array if you don't want to give them any pistols)
 											"hgun_ACPC2_F",
@@ -541,8 +540,8 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"hgun_Pistol_heavy_02_F",
 											"Exile_Weapon_Colt1911",
 											"Exile_Weapon_Makarov",
-											"Exile_Weapon_Taurus",
-											"Exile_Weapon_TaurusGold"
+											"Exile_Weapon_Taurus"
+											
 										];
 	DMS_assault_optics =				[							// Optics for Assault Class
 											#ifdef GIVE_AI_APEX_GEAR
@@ -665,15 +664,6 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"Exile_Weapon_PKP"
 										];
 	DMS_MG_pistols =				[							// Pistols for Assault Class (Set to empty array if you don't want to give them any pistols)
-											"hgun_ACPC2_F",
-											"hgun_Rook40_F",
-											"hgun_P07_F",
-											"hgun_Pistol_heavy_01_F",
-											"hgun_Pistol_heavy_02_F",
-											"Exile_Weapon_Colt1911",
-											"Exile_Weapon_Makarov",
-											"Exile_Weapon_Taurus",
-											"Exile_Weapon_TaurusGold"
 										];
 	DMS_MG_optics =						[							//	Optics for MG Class
 											#ifdef GIVE_AI_APEX_GEAR
@@ -812,7 +802,16 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_sniper_pistols =				[							// Pistols for Assault Class (Set to empty array if you don't want to give them any pistols)
 											#ifdef GIVE_AI_APEX_WEAPONS
 											"hgun_Pistol_01_F",
+											"hgun_Pistol_01_F",
 											#endif
+											"hgun_ACPC2_F",
+											"hgun_Rook40_F",
+											"hgun_P07_F",
+											"hgun_Pistol_heavy_01_F",
+											"hgun_Pistol_heavy_02_F",
+											"Exile_Weapon_Colt1911",
+											"Exile_Weapon_Makarov",
+											"Exile_Weapon_Taurus",
 											"hgun_ACPC2_F",
 											"hgun_Rook40_F",
 											"hgun_P07_F",
@@ -1055,14 +1054,12 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"CUP_srifle_M24_ghillie",
 											"CUP_srifle_M40A3_bipod",
 											"CUP_hgun_Phantom_Flashlight_snds",
-											"CUP_hgun_TaurusTracker455_gold",
 											"CUP_srifle_SVD",
 											"UP_srifle_SVD_des_ghillie_pso",
 											"CUP_srifle_VSSVintorez",
 											"CUP_arifle_AK47",
 											"CUP_arifle_AK107",
 											"CUP_arifle_AKM",
-											"CUP_arifle_AKS_Gold",
 											"CUP_smg_bizon",
 											"CUP_arifle_CZ805_A2",
 											"CUP_arifle_CZ805_B",
@@ -1141,7 +1138,6 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"Exile_Weapon_AK107_GL",
 											"Exile_Weapon_AK74_GL",
 											"Exile_Weapon_AK47",
-											"Exile_Weapon_AKS_Gold",
 											"LMG_Zafir_F",
 											"LMG_Mk200_F",
 											"arifle_MX_SW_Black_F",
@@ -1287,11 +1283,15 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_RareLootAmount					= 1;						// How many rare loot items to add.
 	DMS_RareLootList =					[							// List of rare loot to spawn
 											"Exile_Item_SafeKit",
+											"Exile_Weapon_AKS_Gold",
+											"CUP_hgun_TaurusTracker455_gold",
+											"Exile_Weapon_TaurusGold",
+											"CUP_arifle_AKS_Gold",
 											"Exile_Item_CodeLock",
 											"Exile_Boat_RubberDuck_Abstract",
 											"CUP_item_Money"
 										];
-	DMS_RareLootChance					= 20;						// Percentage Chance to spawn rare loot in any crate | Default: 10%
+	DMS_RareLootChance					= 30;						// Percentage Chance to spawn rare loot in any crate | Default: 10%
 
 	// Vehicles
 	DMS_ArmedVehicles =					[							// List of armed vehicles that can spawn
@@ -1301,16 +1301,14 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"Exile_Car_SUV_Armed_Black",
 											"CUP_B_HMMWV_M2_GPK_USA",
 											"CUP_B_HMMWV_M2_GPK_ACR",
-											"CUP_B_Dingo_GER_Wdl",
 											"CUP_B_LR_Special_GMG_GB_D",
-											"CUP_B_Mastiff_LMG_GB_W",
-											"CUP_B_Ridgback_LMG_GB_W",
-											"CUP_B_Wolfhound_LMG_GB_W",
-											"CUP_O_UAZ_MG_CHDKZ",
 											"CUP_B_LR_MG_CZ_W",
+											"CUP_O_UAZ_MG_CHDKZ",
 											"CUP_B_HMMWV_M1114_USMC",
-											"CUP_B_HMMWV_DSHKM_GPK_ACR"
-											
+											"CUP_B_HMMWV_DSHKM_GPK_ACR",
+											"B_MRAP_01_hmg_F",
+											"O_MRAP_02_hmg_F",
+											"I_MRAP_03_hmg_F"
 										];
 
 	DMS_MilitaryVehicles =				[							// List of (unarmed) military vehicles that can spawn

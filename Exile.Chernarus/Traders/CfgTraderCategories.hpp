@@ -1792,6 +1792,8 @@ class CfgTraderCategories
 		items[] =
 		{
 			"B_MRAP_01_hmg_F",
+			"O_MRAP_02_hmg_F",
+			"I_MRAP_03_hmg_F",
 			"Exile_Car_BTR40_MG_Green",
 			"Exile_Car_HMMWV_M134_Green",
 			"Exile_Car_HMMWV_M2_Green",
@@ -1808,12 +1810,8 @@ class CfgTraderCategories
 		{
 			"CUP_B_HMMWV_M2_GPK_USA",
 			"CUP_B_HMMWV_M2_GPK_ACR",
-			"CUP_B_Dingo_GER_Wdl",
 			"CUP_B_BRDM2_HQ_CDF",
 			"CUP_B_LR_Special_GMG_GB_D",
-			"CUP_B_Mastiff_LMG_GB_W",
-			"CUP_B_Ridgback_LMG_GB_W",
-			"CUP_B_Wolfhound_LMG_GB_W",
 			"CUP_O_UAZ_MG_CHDKZ",
 			"CUP_B_LR_MG_CZ_W",
 			"CUP_B_HMMWV_M1114_USMC",
