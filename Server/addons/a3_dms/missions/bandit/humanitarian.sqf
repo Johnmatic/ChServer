@@ -44,17 +44,17 @@ if !(_OK) exitWith
 
 
 // Set general mission difficulty
-_difficulty = "moderate";
+_difficulty = "easy";
 
 
 // Create AI
-_AICount = 3 + (round (random 2));
+_AICount = 2 + (round (random 2));
 
 _group =
 [
 	_pos,					// Position of AI
 	_AICount,				// Number of AI
-	"random",				// "random","hardcore","difficult","moderate", or "easy"
+	"easy",				// "random","hardcore","difficult","moderate", or "easy"
 	"random", 				// "random","assault","MG","sniper" or "unarmed" OR [_type,_launcher]
 	_side 					// "bandit","hero", etc.
 ] call DMS_fnc_SpawnAIGroup;
@@ -69,7 +69,7 @@ _wreck = createVehicle ["Land_Wreck_Van_F",[(_pos select 0) - 10, (_pos select 1
 _crate_loot_values1 =
 [
 	2,		// Weapons
-	[12,["Exile_Item_GloriousKnakWorst_Cooked","Exile_Item_PlasticBottleFreshWater","Exile_Item_PlasticBottleFreshWater","Exile_Item_BBQSandwich_Cooked","Exile_Item_Catfood_Cooked","Exile_Item_ChristmasTinner_Cooked"]],		// Items
+	[12,["Exile_Item_GloriousKnakWorst_Cooked","Exile_Item_PlasticBottleFreshWater","Exile_Item_PlasticBottleFreshWater","Exile_Item_BBQSandwich_Cooked","Exile_Item_Catfood_Cooked","Exile_Item_ChristmasTinner_Cooked","Exile_Item_InstaDoc"]],		// Items
 	2 		// Backpacks
 ];
 
