@@ -37,7 +37,7 @@ class CfgBuildings
 	};
 
 	class Land_PowLines_WoodL : CivillianLowerClass {
-		positions[] = { { 0.13916, 0.526367, -3.49637 }, { -0.101563, -1.41504, -3.49637 } };
+		positions[] = { {-1.08105, -1.91895, -3.39902}, {-1.41699, -4.78516, -3.39902} };
 	};
 
 	class Land_Shed_M03 : CivillianLowerClass {
