@@ -42,7 +42,7 @@ class CfgAdminToolkitCustomMod
 
 class CfgXM8
 {
-	extraApps[] = { "ExAd_VG", "ExAd_Info", "ExAd_CHVD", "ExAd_Journal", "ExAd_Bike", "ExAd_Quad", "ExAd_SB" };
+	extraApps[] = { "ExAd_VG", "ExAd_Info", "ExAd_CHVD", "ExAd_Journal", "ExAd_Quad", "ExAd_SB", "BRAmaRecipes" };
 
 	class ExAd_VG
 	{
@@ -108,6 +108,16 @@ class CfgXM8
 		controlID = 50400;					//IDC:50400 -> 50475 || These need to be unique and out of range from each other
 		logo = "ExadClient\XM8\Apps\SB_Settings\Icon_SB.paa";
 		onLoad = "ExAdClient\XM8\Apps\SB_Settings\onLoad.sqf";
+	};
+
+	class BRAmaRecipes
+	{
+		controlID = 107000;
+		title = "Crafting Recipies";
+		logo = "ExAdClient\XM8\Apps\BRAmaRecipes\BRAma.paa";
+		config = "ExAdClient\XM8\Apps\BRAmaRecipes\config.sqf";
+		onLoad = "ExAdClient\XM8\Apps\BRAmaRecipes\onLoad.sqf";
+		onOpen = "ExAdClient\XM8\Apps\BRAmaRecipes\onOpen.sqf";
 	};
 };
 
