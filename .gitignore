@@ -5,3 +5,9 @@ LootTable/CfgExileLootServer.hpp
 Server/addons/exile_server_config/CfgExileLootServer.hpp
 Exile Auto Start.bat
 Exile.Ch.7z
+AdminToolkitConfig/admintoolkit_servercfg/config.cpp
+battleye/BEServer.cfg
+Server/addons/exile_server_config/config.cpp
+Server/basic.cfg
+Server/config.cfg
+Server/extdb3-conf.ini
