@@ -48,13 +48,13 @@ _difficulty = "hardcore";
 
 
 // Create AI
-_AICount = 14 + (round (random 5));
+_AICount = 4 + (round (random 2));
 
 _group =
 [
 	_pos,					// Position of AI
 	_AICount,				// Number of AI
-	"hardcore",				// "random","hardcore","difficult","moderate", or "easy"
+	"random",				// "random","hardcore","difficult","moderate", or "easy"
 	"random", 				// "random","assault","MG","sniper" or "unarmed" OR [_type,_launcher]
 	_side 					// "bandit","hero", etc.
 ] call DMS_fnc_SpawnAIGroup;
@@ -66,9 +66,9 @@ _crate = ["Box_NATO_Wps_F",_pos] call DMS_fnc_SpawnCrate;
 // Set crate loot values
 _crate_loot_values =
 [
-	15,		// Weapons
-	20,		// Items
-	5 		// Backpacks
+	7,		// Weapons
+	2,		// Items
+	3 		// Backpacks
 ];
 
 
