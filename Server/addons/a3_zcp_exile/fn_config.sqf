@@ -55,14 +55,14 @@ ZCP_MinPoptabReward = 1000; // Poptabreward is added to this number
 ZCP_ReputationReward = 25; // Respect reward for capping per  player online.
 ZCP_MinReputationReward = 1000; // ZCP_ReputationReward is added to this number
 ZCP_ReputationRewardForGroup = 500; // Each group members gets this amount of reputation ( for the trouble).
-ZCP_CONFIG_GroupDistanceForRespect = 1000; // meters to be close to the capper to get the group award
+ZCP_CONFIG_GroupDistanceForRespect = 2000; // meters to be close to the capper to get the group award
 
 ZCP_CleanupBase = true; // Let the base dissappear after completing
 ZCP_CleanupBaseWithAIBomber = false; // Cleanup with a airstrike
 ZCP_CleanupAIVehicleClasses = ['B_Plane_CAS_01_F']; // Any flying vehicle in arma (default B_Plane_CAS_01_F = A10)
 ZCP_FlyHeight = 150; // Height of the flying plane;
 
-ZCP_BomberCanDestroyMapBuildings = false; // if true damage of the bombs are applied to all objects in the blastradius.
+ZCP_BomberCanDestroyMapBuildings = true; // if true damage of the bombs are applied to all objects in the blastradius.
 // If false nothing gets hit ( except players and vehicles ) - base cleanup will happen in both cases after explosion.
 
 ZCP_UseSpecificNamesForCappers = false; // Use the player name, if false it says 'A player'
@@ -133,7 +133,7 @@ ZCP_BuildingBox = "O_CargoNet_01_ammo_F";
 ZCP_WeaponBox = "I_CargoNet_01_ammo_F";
 
 /* 3.1 new configs */
-ZCP_CONFIG_TerritoryDistance = 500;  // Distance from territories. ( 0 to disable )
+ZCP_CONFIG_TerritoryDistance = 50;  // Distance from territories. ( 0 to disable )
 
 ZCP_CONFIG_AI_side = east; // The side where the AI is on.
 ZCP_CONFIG_AI_soldierClass = 'O_G_Soldier_F'; // The class model for the soldier ( This needs to be a soldier from the AI faction! -> otherwise they shoot eachother on spawn)
