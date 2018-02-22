@@ -49,6 +49,16 @@ class CfgExileCustomCode
 	ExileClient_gui_selectSpawnLocation_zoomToMarker = "xs\spawn\Overwrites\ExileClient_gui_selectSpawnLocation_zoomToMarker.sqf";
 	ExileClient_gui_selectSpawnLocation_event_onListBoxSelectionChanged = "xs\spawn\Overwrites\ExileClient_gui_selectSpawnLocation_event_onListBoxSelectionChanged.sqf";
 	ExileServer_object_player_createBambi = "xs\spawn\Overwrites\ExileServer_object_player_createBambi.sqf";
+	
+	//Vector Building
+	ExileClient_object_construction_move = "eXpochVectorBldg\ExileClient_object_construction_move.sqf";
+	ExileClient_gui_hud_event_onKeyDown = "eXpochVectorBldg\ExileClient_gui_hud_event_onKeyDown.sqf";
+	ExileClient_gui_hud_event_onKeyUp = "eXpochVectorBldg\ExileClient_gui_hud_event_onKeyUp.sqf";
+	ExileClient_construction_beginExistingObject = "eXpochVectorBldg\ExileClient_construction_beginExistingObject.sqf";
+	ExileClient_construction_beginNewObject = "eXpochVectorBldg\ExileClient_construction_beginNewObject.sqf";
+	ExileClient_construction_thread = "eXpochVectorBldg\ExileClient_construction_thread.sqf";
+	ExileClient_gui_constructionMode_update = "eXpochVectorBldg\ExileClient_gui_constructionMode_update.sqf";
+	ExileClient_util_world_canBuildHere = "eXpochVectorBldg\ExileClient_util_world_canBuildHere.sqf";
 
 	//custom
 	ExileClient_util_gear_calculateSellPrice = "Exile_Client_Overrides\ExileClient_util_gear_calculateSellPrice.sqf";
