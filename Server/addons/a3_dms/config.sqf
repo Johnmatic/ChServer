@@ -21,8 +21,6 @@
 // Uncomment this if you want Apex weapons on AI.
 #define GIVE_AI_APEX_WEAPONS 1
 
-#define GIVE_AI_CUP_WEAPONS 1
-
 // Uncomment this if you want Apex gear on AI. Uniforms, Vests, Backpacks, Helmets,Scopes
 #define GIVE_AI_APEX_GEAR 1
 
@@ -65,7 +63,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_MissionTimeout					= [900,1800]; 				// [Minimum,Maximum] time it will take for a mission to timeout | DEFAULT: 15-30 mins
 	DMS_MissionTimeoutResetRange		= 1500;						// If a player is this close to a mission then it won't time-out. Set to 0 to disable this check.
 	DMS_MissionTimeoutResetFrequency	= 180;						// How often (in seconds) to check for nearby players and reset the mission timeout.
-	DMS_ResetMissionTimeoutOnKill		= true;						// Whether or not to reset the mission timeout when an AI is killed.
+	DMS_ResetMissionTimeoutOnKill		= true;					www	// Whether or not to reset the mission timeout when an AI is killed.
 	/*General settings for dynamic missions*/
 
 	/*General settings for static missions*/
@@ -513,30 +511,6 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 
 	//Assault Class
 	DMS_assault_weps =					[							// Assault Rifles
-											#ifdef GIVE_AI_CUP_WEAPONS
-											"CUP_arifle_AK107",
-											"CUP_arifle_AKS",
-											"CUP_arifle_AKS74U",
-											"CUP_arifle_FNFAL",
-											"CUP_arifle_FNFAL_railed",
-											"CUP_arifle_G36C",
-											"CUP_arifle_G36K",
-											"CUP_arifle_G36C",
-											"CUP_arifle_L85A2",
-											"CUP_arifle_L86A2",
-											"CUP_arifle_M16A2",
-											"CUP_arifle_M16A4_GL",
-											"CUP_arifle_M4A1",
-											"CUP_arifle_M4A1_camo",
-											"CUP_arifle_M4A3_desert",
-											"CUP_arifle_Mk16_CQC",
-											"CUP_arifle_Mk16_CQC_FG",
-											"CUP_arifle_Mk16_STD",
-											"CUP_arifle_Mk16_STD_FG",
-											"CUP_arifle_Mk17_CQC",
-											"CUP_arifle_Sa58P",
-											
-											#endif
 											#ifdef GIVE_AI_APEX_WEAPONS
 											"arifle_AK12_F",
 											"arifle_ARX_ghex_F",
@@ -584,13 +558,12 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 										];
 	DMS_assault_optic_chance			= 75;						// Percentage chance that an Assault Class AI will get an optic
 	DMS_assault_bipod_chance			= 25;						// Percentage chance that an Assault Class AI will get a bipod
-	DMS_assault_suppressor_chance		= 5;						// Percentage chance that an Assault Class AI will get a suppressor
+	DMS_assault_suppressor_chance		= 25;						// Percentage chance that an Assault Class AI will get a suppressor
 
 	DMS_assault_items =					[							// Items for Assault Class AI (Loot stuff that goes in uniform/vest/backpack)
 											"Exile_Item_InstaDoc",
 											"Exile_Item_BBQSandwich",
-											"Exile_Item_Energydrink",
-											"Exile_Item_CanOpener"
+											"Exile_Item_Energydrink"
 										];
 	DMS_assault_equipment =				[							// Equipment for Assault Class AI (stuff that goes in toolbelt slots)
 											"ItemGPS"
@@ -679,9 +652,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 	DMS_MG_weps	=						[							// Machine Guns
 											#ifdef GIVE_AI_MARKSMAN_DLC_WEAPONS
 											"MMG_01_hex_F",
-											"MMG_01_tan_F",
 											"MMG_02_black_F",
-											"MMG_02_camo_F",
 											#endif
 
 											#ifdef GIVE_AI_APEX_WEAPONS
@@ -708,13 +679,13 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 										];
 	DMS_MG_optic_chance					= 50;						// Percentage chance that an MG Class AI will get an optic
 	DMS_MG_bipod_chance					= 90;						// Percentage chance that an MG Class AI will get a bipod
-	DMS_MG_suppressor_chance			= 0;						// Percentage chance that an MG Class AI will get a suppressor
+	DMS_MG_suppressor_chance			= 10;						// Percentage chance that an MG Class AI will get a suppressor
 
 	DMS_MG_items =						[							// Items for MG Class AI (Loot stuff that goes in uniform/vest/backpack)
 											"Exile_Item_InstaDoc",
 											"Exile_Item_Catfood_Cooked",
 											"Exile_Item_PlasticBottleFreshWater",
-											"Exile_Item_CanOpener"
+											"Exile_Item_CookingPot"
 										];
 	DMS_MG_equipment =					[							// Equipment for MG Class AI (stuff that goes in toolbelt slots)
 											"Binocular"
@@ -726,7 +697,6 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"Exile_Item_PowerDrink",
 											"Exile_Item_PlasticBottleCoffee",
 											"Exile_Item_Vishpirin",
-											"Exile_Item_CookingPot",
 											"Exile_Item_Instadoc"
 										];
 	DMS_MG_helmets =					[							// Helmets for MG Class
@@ -810,16 +780,6 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 
 	//Sniper Class
 	DMS_sniper_weps =					[							// Sniper Rifles
-											#ifdef GIVE_AI_CUP_WEAPONS
-											"CUP_arifle_Mk20",
-											"CUP_srifle_AWM_wdl",
-											"CUP_srifle_CZ550",
-											"CUP_srifle_M110",
-											"CUP_srifle_M24_ghillie",
-											"CUP_srifle_M24_wdl",
-											"CUP_srifle_M40A3",
-											"CUP_srifle_SVD",
-											#endif
 											"srifle_EBR_F",
 											"srifle_GM6_F",
 											"srifle_LRR_F",
@@ -879,7 +839,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 										];
 	DMS_sniper_optic_chance				= 100;						// Percentage chance that a Sniper Class AI will get an optic
 	DMS_sniper_bipod_chance				= 90;						// Percentage chance that a Sniper Class AI will get a bipod
-	DMS_sniper_suppressor_chance		= 5;						// Percentage chance that a Sniper Class AI will get a suppressor
+	DMS_sniper_suppressor_chance		= 15;						// Percentage chance that a Sniper Class AI will get a suppressor
 
 	DMS_sniper_items =					[							// Items for Sniper Class AI (Loot stuff that goes in uniform/vest/backpack)
 											"Exile_Item_InstaDoc",
@@ -916,22 +876,6 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											#ifdef GIVE_AI_APEX_GEAR
 											"U_B_T_Sniper_F",
 											"U_B_T_FullGhillie_tna_F",				// Invisible to thermal? 0_o
-											"U_O_T_Sniper_F",
-											"U_O_T_FullGhillie_tna_F",
-											#endif
-											#ifdef GIVE_AI_MARKSMAN_DLC_WEAPONS
-											"U_B_FullGhillie_ard",		
-											"U_B_FullGhillie_lsh",
-											"U_B_FullGhillie_sard",
-											"U_O_FullGhillie_ard",
-											"U_O_FullGhillie_lsh",
-											"U_O_FullGhillie_sard",
-											"U_I_FullGhillie_ard",
-											"U_I_FullGhillie_lsh",
-											"U_I_FullGhillie_sard",
-											"U_B_T_Sniper_F",
-											"U_B_T_Soldier_F",
-											"U_B_T_FullGhillie_tna_F",
 											"U_O_T_Sniper_F",
 											"U_O_T_FullGhillie_tna_F",
 											#endif
@@ -1162,7 +1106,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											#ifdef USE_MARKSMAN_DLC_WEAPONS_IN_CRATES
 											"srifle_DMR_02_F",
 											"srifle_DMR_03_woodland_F",
-											"srifle_DMR_04_F",			// ASP-1 Kir
+											//"srifle_DMR_04_F",			// ASP-1 Kir
 											"srifle_DMR_05_blk_F",
 											"srifle_DMR_06_olive_F",
 											"MMG_01_hex_F",
@@ -1180,7 +1124,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											#endif
 											"Exile_Melee_Axe",
 											"Exile_Melee_SledgeHammer",
-											"Exile_Melee_Shovel",					// Not really interesting for players...
+											//"Exile_Melee_Shovel",					// Not really interesting for players...
 											"arifle_Katiba_GL_F",
 											"arifle_MX_GL_Black_F",
 											"arifle_Mk20_GL_F",
@@ -1346,9 +1290,7 @@ DMS_SpawnMissions_Scheduled = false;	// Whether or not to spawn missions in a sc
 											"CUP_arifle_AKS_Gold",
 											"Exile_Item_CodeLock",
 											"Exile_Boat_RubberDuck_Abstract",
-											"CUP_item_Money",
-											"Exile_Item_Laptop",
-											"Exile_Item_BaseCameraKit"
+											"CUP_item_Money"
 										];
 	DMS_RareLootChance					= 30;						// Percentage Chance to spawn rare loot in any crate | Default: 10%
 
