@@ -5,4 +5,5 @@ SA_TOW_LOCKED_VEHICLES_ENABLED = false;
 
 if(hasInterface) then{
     [] execVM "rearm\service_point.sqf";
+	[] execVM "jump.sqf"; 
 };
