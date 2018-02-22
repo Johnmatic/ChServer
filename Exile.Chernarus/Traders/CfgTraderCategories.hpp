@@ -1927,20 +1927,10 @@ class CfgTraderCategories
 		icon = "a3\ui_f\data\gui\Rsc\RscDisplayArsenal\CargoMag_ca.paa";
 		items[] =
 		{
-			"CUP_Mine_M",
-			"CUP_TimeBomb_M",
-			"CUP_MineE_M",
-			"CUP_PipeBomb_M",
-			"CUP_IED_V1_M",
-			"CUP_IED_V2_M",
-			"CUP_IED_V3_M",
-			"CUP_IED_V4_M",
-			"SatchelCharge_Remote_Mag",
 			"ATMine_Range_Mag",
 			"APERSMine_Range_Mag",
 			"APERSBoundingMine_Range_Mag",
 			"APERSTripMine_Wire_Mag",
-			"ClaymoreDirectionalMine_Remote_Mag",
 			"IEDUrbanBig_Remote_Mag",
 			"IEDLandBig_Remote_Mag",
 			"IEDUrbanSmall_Remote_Mag",
