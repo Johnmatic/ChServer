@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_airportPositions","_config","_markerTime","_filteredAirportPositions","_dropAltitude","_dropRadius","_boxType","_airportPosition","_position","_marker","_box","_itemClassName","_itemCount","_i","_supplySmoke","_parachute"];
+private["_airportPositions", "_config", "_markerTime", "_filteredAirportPositions", "_dropAltitude", "_dropRadius", "_boxType", "_airportPosition", "_position", "_marker", "_box", "_itemClassName", "_itemCount", "_i", "_supplySmoke", "_parachute"];
 _airportPositions = call ExileClient_util_world_getAllAirportPositions;
 _config = configFile >> "CfgSettings" >> "Events" >> "SupplyBox";
 _markerTime = getNumber (_config >> "markerTime");

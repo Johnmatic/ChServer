@@ -16,7 +16,7 @@ if !(isNull _vehicle) then
 	if !(_vehicle getVariable["ExileIsSimulationMonitored", false]) then
 	{
 		_vehicle setVariable ["ExileIsSimulationMonitored", true];
-		_vehicle enableDynamicSimulation true;
+		ExileSimulationMonitoredVehicles pushBackUnique _vehicle;
 	};
 };
 true

@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_targetPlayer","_flyHeight","_speed","_direction","_targetPosition","_distance","_endPosition","_planeClass","_i","_startPosition","_pilot","_plane","_waypoint"];
+private["_targetPlayer", "_flyHeight", "_speed", "_direction", "_targetPosition", "_distance", "_endPosition", "_planeClass", "_i", "_startPosition", "_pilot", "_plane", "_waypoint"];
 _group = createGroup independent;
 _targetPlayer = selectRandom allPlayers;
 format ["Ambient Fly Over - Heading to %1...", _targetPlayer] call ExileServer_util_log;
@@ -44,7 +44,7 @@ for "_i" from 1 to (1 + (floor (random 3))) do
 		(_targetPosition select 1) + (cos _direction) * _distance,
 		800 
 	];
-	_pilot = _group createUnit ["I_helicrew_F", _startPosition, [], 100, "PRIVATE"];
+	_pilot = _group createUnit ["I_helicrew_F", _startPosition, [], 100, "NONE"];
 	_pilot setSkill 1;
 	[_pilot] joinSilent _group;
 	_plane = createVehicle [_planeClass, _startPosition, [], 100, "FLY"];

@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionId","_parameters","_netId","_animal"];
+private["_sessionId", "_parameters", "_netId", "_animal", "_player"];
 _sessionId = _this select 0;
 _parameters = _this select 1;
 _netId = _parameters select 0;
@@ -23,5 +23,10 @@ else
 	_animal setVariable ["SpawnedAt", time];
 	_animal setVariable ["WasGutted", false];
 	_animal setVariable ["CanBeGutted", false, true];
-	_animal addEventHandler ["Killed", { _this call ExileServer_object_animal_event_onKilled; }];
+	_animal addMPEventHandler ["MPKilled", { _this call ExileServer_object_animal_event_onKilled; }];
+	_player = _sessionId call ExileServer_system_session_getPlayerObject;
+	if !(isNull _player) then
+	{
+		missionNamespace setVariable [format ["ExileAnimal%1", getPlayerUID _player], _animal];
+	};
 };

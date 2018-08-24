@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_objectNetID","_object","_playerObject","_playerUID","_objectID","_ownerUID","_canDeconstruct","_flag","_buildRights","_message","_constructionConfig","_holderPosition","_holder"];
+private["_sessionID", "_parameters", "_objectNetID", "_object", "_playerObject", "_playerUID", "_objectID", "_ownerUID", "_canDeconstruct", "_flag", "_buildRights", "_lastAttackedAt", "_constructionBlockDuration", "_message", "_constructionConfig", "_holderPosition", "_holder"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _objectNetID = _parameters select 0;
@@ -59,6 +59,18 @@ try
 	};
 	if (_canDeconstruct) then
 	{
+		if !(isNull _flag) then
+		{
+			_lastAttackedAt = _flag getVariable ["ExileLastAttackAt", false];
+			if !(_lastAttackedAt isEqualTo false) then 
+			{
+				_constructionBlockDuration = getNumber (missionConfigFile >> "CfgTerritories" >> "constructionBlockDuration");
+				if (time - _lastAttackedAt < _constructionBlockDuration * 60) then
+				{
+					throw (format ["Territory has been under attack within the last %1 minutes.", _constructionBlockDuration]);
+				};
+			};
+		};
 		_object call ExileServer_object_construction_database_delete;
 		_message = "The object was not refunded, since it was damaged.";
 		if (_object getVariable ["ExileConstructionDamage",0] isEqualTo 0)then

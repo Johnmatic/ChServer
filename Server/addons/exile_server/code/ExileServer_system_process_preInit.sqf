@@ -16,7 +16,7 @@ finishMissionInit;
 ExileSessionIDs = [];
 ExileServerGraveyardGroup = grpNull;
 ExileServerBreachingCharges = [];
-ExileServerDeadAnimals = [];
+ExileShippingContainers = [];
 independent setFriend [sideEnemy, 1];
 call ExileServer_system_process_noobFilter;
 _MySql_connection = [] call ExileServer_system_database_connect;

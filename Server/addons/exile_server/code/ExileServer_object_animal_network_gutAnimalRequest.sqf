@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionId","_parameters","_netId","_player","_sessionID","_animal","_animalConfig"];
+private["_sessionId", "_parameters", "_netId", "_player", "_sessionID", "_animal", "_animalConfig", "_lootHolder"];
 _sessionId = _this select 0;
 _parameters = _this select 1;
 _netId = _parameters select 0;
@@ -48,8 +48,11 @@ try
 	_animal setVariable ["WasGutted", true];
 	_animal setVariable ["CanBeGutted", false, true];
 	_animalConfig = configFile >> "CfgVehicles" >> typeOf _animal >> "Exile";
+	_lootHolder = createVehicle ["GroundWeaponHolder", (getPosATL _animal), [], 3, "CAN_COLLIDE"];
+	_lootHolder setDir (random 360);
+	_lootHolder setPosATL (getPosATL _animal);
 	{
-		_animal addMagazineGlobal [_x select 1, _x select 0];
+		_lootHolder addMagazineCargoGlobal [_x select 1, _x select 0];
 	}
 	forEach getArray (_animalConfig >> "gutItems");
 }

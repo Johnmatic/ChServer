@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_vehicleID","_data","_position","_vectorDirection","_vectorUp","_pinCode","_texture","_vehicleObject","_lock","_unlockInSafeZonesAfterRestart","_isLocked","_hitpoints","_cargoContainers"];
+private["_vehicleID", "_data", "_position", "_vectorDirection", "_vectorUp", "_pinCode", "_texture", "_vehicleObject", "_lock", "_unlockInSafeZonesAfterRestart", "_isLocked", "_hitpoints", "_cargoContainers"];
 _vehicleID = _this;
 _data = format ["loadVehicle:%1", _vehicleID] call ExileServer_system_database_query_selectSingle;
 _position = [_data select 8, _data select 9, _data select 10];
@@ -98,7 +98,14 @@ if !(_texture isEqualTo "") then
 	forEach _texture;
 };
 _vehicleObject enableSimulationGlobal false;
-_vehicleObject call ExileServer_system_simulationMonitor_addVehicle;
+if (getNumber(missionConfigFile >> "CfgSimulation" >> "enableDynamicSimulation") isEqualTo 1) then 
+{
+	_vehicleObject enableDynamicSimulation true;
+}
+else
+{
+	_vehicleObject call ExileServer_system_simulationMonitor_addVehicle;
+};
 if (_vehicleObject call ExileClient_util_world_isInTraderZone) then 
 {
 	_vehicleObject allowDamage false;

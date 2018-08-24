@@ -9,14 +9,14 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_object","_fliesSound","_fliesParticles"];
+private["_object", "_fliesSound", "_fliesParticles"];
 _object = _this;
 if (_object getVariable ["ExileIsSimulationMonitored", false]) then
 {
 	_object call ExileServer_system_simulationMonitor_removeVehicle;
 };
-_object removeAllEventHandlers "MPKilled";
-_object removeAllEventHandlers "Damaged";
+_object removeAllMPEventHandlers "MPKilled";
+_object removeAllEventHandlers "Dammaged";
 _object removeAllEventHandlers "GetIn";
 _object removeAllEventHandlers "GetOut";
 removeAllActions _object;

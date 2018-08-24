@@ -16,7 +16,7 @@ if !(isNull _vehicle) then
 	if (_vehicle getVariable["ExileIsSimulationMonitored", false]) then
 	{
 		_vehicle setVariable ["ExileIsSimulationMonitored", nil];
-		_vehicle enableDynamicSimulation false;
+		ExileSimulationMonitoredVehicles deleteAt (ExileSimulationMonitoredVehicles find _vehicle);
 	};
 };
 true

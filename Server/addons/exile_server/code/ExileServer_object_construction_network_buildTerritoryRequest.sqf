@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_paramaters","_objectClassName","_objectPosition","_flag","_territoryName","_alphabet","_forbiddenCharacter","_playerObject","_minimumDistanceToTraderZones","_minimumDistanceToSpawnZones","_maximumTerritoryRadius","_object"];
+private["_sessionID", "_paramaters", "_objectClassName", "_objectPosition", "_flag", "_territoryName", "_alphabet", "_forbiddenCharacter", "_playerObject", "_canBuildHereResult", "_object"];
 _sessionID = _this select 0;
 _paramaters = _this select 1;
 _objectClassName = _paramaters select 0;
@@ -21,36 +21,53 @@ try
 	_territoryName = _territoryName call ExileClient_util_string_trim;
 	_alphabet = getText (missionConfigFile >> "CfgClans" >> "clanNameAlphabet");
 	_forbiddenCharacter = [_territoryName, _alphabet] call ExileClient_util_string_containsForbiddenCharacter;
-	if !(_forbiddenCharacter isEqualTo -1) then 
+	if !(_forbiddenCharacter isEqualTo -1) then
 	{
 		throw "Forbidden Character";
 	};
-	if !(_objectClassName isEqualTo "Exile_Construction_Flag_Preview") then 
+	if !(_objectClassName isEqualTo "Exile_Construction_Flag_Preview") then
 	{
 		throw "What a hell are you doing";
 	};
 	_playerObject = _sessionID call ExileServer_system_session_getPlayerObject;
-	if (isNull _playerObject) then 
+	if (isNull _playerObject) then
 	{
 		throw "Invalid Player Object";
 	};
-	_minimumDistanceToTraderZones = getNumber (missionConfigFile >> "CfgTerritories" >> "minimumDistanceToTraderZones");
-	if ([_objectPosition, _minimumDistanceToTraderZones] call ExileClient_util_world_isTraderZoneInRange) then 
+	_canBuildHereResult = ["Flag", ATLtoASL _objectPosition, getPlayerUID _playerObject] call ExileClient_util_world_canBuildHere;
+	switch (_canBuildHereResult) do
 	{
-		throw "You cannot build close to trader zones.";
+		case 11:
+		{
+			throw "You are too close to a concrete mixer.";
+		};
+		case 10:
+		{
+			throw "Building is blocked here.";
+		};
+		case 2:
+		{
+			throw "You are inside enemy territory.";
+		};
+		case 8:
+		{
+			throw "You are in a contaminated zone.";
+		};
+		case 3:
+		{
+			throw "This cannot be placed on roads.";
+		};
+		case 5:
+		{
+			throw "You are too close to a spawn zone.";
+		};
+		case 4:
+		{
+			throw "You are too close to traders.";
+		};
 	};
-	_minimumDistanceToSpawnZones = getNumber (missionConfigFile >> "CfgTerritories" >> "minimumDistanceToSpawnZones");
-	if ([_objectPosition, _minimumDistanceToSpawnZones] call ExileClient_util_world_isSpawnZoneInRange) then 
-	{
-		throw "You cannot build close to spawn zones.";
-	};
-	_maximumTerritoryRadius = getNumber (missionConfigFile >> "CfgTerritories" >> "minimumDistanceToOtherTerritories");
-	if ([_objectPosition, _maximumTerritoryRadius] call ExileClient_util_world_isTerritoryInRange) then 
-	{
-		throw "You are too close to enemy territory.";
-	};
-	_object = createVehicle[_objectClassName, _objectPosition, [], 0, "CAN_COLLIDE"];	
-	_object setPos _objectPosition;
+	_object = createVehicle[_objectClassName, _objectPosition, [], 0, "CAN_COLLIDE"];
+	_object setPosATL _objectPosition;
 	_object enableSimulationGlobal true;
 	if (isClass (configFile >> "CfgFlagsNative" >> _flag)) then
 	{

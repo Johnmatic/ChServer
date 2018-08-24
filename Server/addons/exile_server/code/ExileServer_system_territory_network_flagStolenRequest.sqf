@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_flag","_playerObject","_databaseID","_level","_flagPosition","_spawnRadius","_weaponHolderPosition","_weaponHolder","_logging","_territoryLog"];
+private["_sessionID", "_parameters", "_flag", "_playerObject", "_databaseID", "_level", "_flagPosition", "_spawnRadius", "_weaponHolderPosition", "_weaponHolder", "_logging", "_territoryLog"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _flag = _parameters select 0;
@@ -29,7 +29,7 @@ try
 		throw "You are too far away!";
 	};
 	_databaseID = _flag getVariable ["ExileDatabaseID",0];
-	_level = _flag getVariable ["ExileTerritoryLevel",_level];
+	_level = _flag getVariable ["ExileTerritoryLevel", 0];
 	_flagPosition = getPosATL _flag;
 	_flagPosition set[2, 0];
 	_spawnRadius = 3;

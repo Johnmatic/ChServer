@@ -11,8 +11,18 @@
  
 private["_vehicleObject"];
 _vehicleObject = _this select 0;
-if !(simulationEnabled _vehicleObject) then 
+if (getNumber(missionConfigFile >> "CfgSimulation" >> "enableDynamicSimulation") isEqualTo 1) then 
 {
-	_vehicleObject enableSimulationGlobal true;
+	if !(dynamicSimulationEnabled _vehicleObject) then 
+	{
+		_vehicleObject enableDynamicSimulation true;
+	};
+}
+else
+{
+	if !(simulationEnabled _vehicleObject) then 
+	{
+		_vehicleObject enableSimulationGlobal true;
+	};
 };
 true

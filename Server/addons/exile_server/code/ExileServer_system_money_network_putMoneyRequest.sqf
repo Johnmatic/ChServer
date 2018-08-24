@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_objectNetID","_amount","_newContainerNetID","_player","_playerMoney","_container","_containerMoney","_nearbyPopTabs","_maximumLoad","_maximumPoptabsLoad","_maximumAmmountToAdd","_containerID"];
+private["_sessionID", "_parameters", "_objectNetID", "_amount", "_newContainerNetID", "_player", "_playerMoney", "_container", "_containerMoney", "_nearbyPopTabs", "_maximumLoad", "_maximumPoptabsLoad", "_maximumAmmountToAdd", "_containerID"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _objectNetID = _parameters select 0;
@@ -63,12 +63,24 @@ try
 	{
 		if!(_container isKindOf "man")then
 		{
-			_maximumLoad = getNumber (configFile >> "CfgVehicles" >> typeOf _container >> "maximumLoad");
-			if(_maximumLoad isEqualTo 0)then
+			if (isClass(missionConfigFile >> "CfgPoptabStorage" >> typeOf _container)) then 
 			{
-				throw "Invalid container load";
+				_maximumLoad = getNumber (missionConfigFile >> "CfgPoptabStorage" >> typeOf _container >> "max");
+				if (_maximumLoad isEqualTo 0) then
+				{
+					throw "Invalid container load";
+				};
+				_maximumPoptabsLoad = _maximumLoad;
+			}
+			else
+			{
+				_maximumLoad = getNumber (configFile >> "CfgVehicles" >> typeOf _container >> "maximumLoad");
+				if(_maximumLoad isEqualTo 0)then
+				{
+					throw "Invalid container load";
+				};
+				_maximumPoptabsLoad = _maximumLoad * 10;
 			};
-			_maximumPoptabsLoad = _maximumLoad * 10;
 			_maximumAmmountToAdd = _maximumPoptabsLoad - _containerMoney;
 			if(_amount > _maximumAmmountToAdd)then
 			{

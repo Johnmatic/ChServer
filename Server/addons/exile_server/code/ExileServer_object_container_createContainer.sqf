@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_className","_position","_direction","_containerObject"];
+private["_className", "_position", "_direction", "_containerObject"];
 _className = _this select 0;
 _position = _this select 1;
 _direction = _this select 2;
@@ -26,5 +26,12 @@ if(getNumber(configFile >> "CfgVehicles" >> typeOf _containerObject >> "exileIsL
 {
 	_containerObject setVariable ["ExileIsLocked", -1,true];
 };
-_containerObject call ExileServer_system_simulationMonitor_addVehicle;
+if (getNumber(missionConfigFile >> "CfgSimulation" >> "enableDynamicSimulation") isEqualTo 1) then 
+{
+	_containerObject enableDynamicSimulation true;
+}
+else
+{
+	_containerObject call ExileServer_system_simulationMonitor_addVehicle;
+};
 _containerObject

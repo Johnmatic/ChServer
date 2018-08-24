@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_containerObject","_position","_vectorDirection","_vectorUp","_territoryFlag","_territoryID","_data","_extDB2Message","_containerID","_cargoContainers"];
+private["_containerObject", "_position", "_vectorDirection", "_vectorUp", "_territoryFlag", "_territoryID", "_data", "_extDB2Message", "_containerID", "_cargoContainers"];
 _containerObject = _this;
 _position = getPosATL _containerObject;
 _vectorDirection = vectorDir _containerObject;
@@ -87,5 +87,7 @@ _containerObject addMPEventHandler ["MPKilled", { if !(isServer) exitWith {}; (_
 if(getNumber(configFile >> "CfgVehicles" >> typeOf _containerObject >> "exileIsLockable") isEqualTo 1)then
 {
 	_containerObject setVariable ["ExileIsLocked",-1,true];
+	_containerObject setVariable ["ExileHackAttempts", 0];
+	_containerObject setVariable ["ExileHackerUID", "", true];
 };
 _containerID

@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_objectNetID","_object","_objectClassname","_isContainer","_playerObject","_playerUID","_objectID","_ownerUID","_canMove","_flag","_buildRights","_money","_holderPosition","_holder"];
+private["_sessionID", "_parameters", "_objectNetID", "_object", "_objectClassname", "_isContainer", "_playerObject", "_playerUID", "_objectID", "_ownerUID", "_canMove", "_flag", "_lastAttackedAt", "_constructionBlockDuration", "_buildRights", "_money", "_holderPosition", "_holder"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _objectNetID = _parameters select 0;
@@ -51,6 +51,18 @@ try
 	if ((_flag getVariable ["ExileFlagStolen", 0]) isEqualTo 1) then
 	{
 		throw "You cannot move parts while your flag is stolen.";
+	};
+	if !(isNull _flag) then
+	{
+		_lastAttackedAt = _flag getVariable ["ExileLastAttackAt", false];
+		if !(_lastAttackedAt isEqualTo false) then 
+		{
+			_constructionBlockDuration = getNumber (missionConfigFile >> "CfgTerritories" >> "constructionBlockDuration");
+			if (time - _lastAttackedAt < _constructionBlockDuration * 60) then
+			{
+				throw (format ["Territory has been under attack within the last %1 minutes.", _constructionBlockDuration]);
+			};
+		};
 	};
 	if (_playerUID isEqualTo _ownerUID) then
 	{

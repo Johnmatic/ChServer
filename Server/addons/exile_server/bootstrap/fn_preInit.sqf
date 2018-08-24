@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private ['_code', '_function', '_file'];
+private ['_code', '_function', '_file', '_fileContent'];
 
 {
     _code = '';
@@ -25,7 +25,16 @@ private ['_code', '_function', '_file'];
         };
     };
 
-    _code = compileFinal (preprocessFileLineNumbers _file);                    
+    _fileContent = preprocessFileLineNumbers _file;
+
+    if (_fileContent isEqualTo '') then
+    {
+        diag_log (format ['ERROR: Override of %1 in CfgExileCustomCode points to a non-existent file: %2. Defaulting to vanilla Exile code!', _function, _file]);
+   
+        _fileContent = preprocessFileLineNumbers (_x select 1);
+    };
+
+    _code = compileFinal _fileContent;                    
 
     missionNamespace setVariable [_function, _code];
 }
@@ -64,10 +73,15 @@ forEach
 	['ExileServer_object_handcuffs_network_breakFreeRequest', 'exile_server\code\ExileServer_object_handcuffs_network_breakFreeRequest.sqf', false],
 	['ExileServer_object_handcuffs_network_freeRequest', 'exile_server\code\ExileServer_object_handcuffs_network_freeRequest.sqf', false],
 	['ExileServer_object_handcuffs_network_handcuffRequest', 'exile_server\code\ExileServer_object_handcuffs_network_handcuffRequest.sqf', false],
+	['ExileServer_object_lock_network_grindLockRequest', 'exile_server\code\ExileServer_object_lock_network_grindLockRequest.sqf', false],
+	['ExileServer_object_lock_network_grindNotificationRequest', 'exile_server\code\ExileServer_object_lock_network_grindNotificationRequest.sqf', false],
+	['ExileServer_object_lock_network_hackLockRequest', 'exile_server\code\ExileServer_object_lock_network_hackLockRequest.sqf', false],
 	['ExileServer_object_lock_network_hotwireLockRequest', 'exile_server\code\ExileServer_object_lock_network_hotwireLockRequest.sqf', false],
 	['ExileServer_object_lock_network_lockToggle', 'exile_server\code\ExileServer_object_lock_network_lockToggle.sqf', false],
 	['ExileServer_object_lock_network_scanCodeLockRequest', 'exile_server\code\ExileServer_object_lock_network_scanCodeLockRequest.sqf', false],
 	['ExileServer_object_lock_network_setPin', 'exile_server\code\ExileServer_object_lock_network_setPin.sqf', false],
+	['ExileServer_object_lock_network_startHackRequest', 'exile_server\code\ExileServer_object_lock_network_startHackRequest.sqf', false],
+	['ExileServer_object_lock_network_updateHackAttemptRequest', 'exile_server\code\ExileServer_object_lock_network_updateHackAttemptRequest.sqf', false],
 	['ExileServer_object_player_createBambi', 'exile_server\code\ExileServer_object_player_createBambi.sqf', false],
 	['ExileServer_object_player_sendStatsUpdate', 'exile_server\code\ExileServer_object_player_sendStatsUpdate.sqf', false],
 	['ExileServer_object_player_database_insert', 'exile_server\code\ExileServer_object_player_database_insert.sqf', false],
@@ -86,6 +100,7 @@ forEach
 	['ExileServer_object_player_network_savePlayerRequest', 'exile_server\code\ExileServer_object_player_network_savePlayerRequest.sqf', false],
 	['ExileServer_object_player_network_setPlayerMoneyRequest', 'exile_server\code\ExileServer_object_player_network_setPlayerMoneyRequest.sqf', false],
 	['ExileServer_object_player_network_switchMoveRequest', 'exile_server\code\ExileServer_object_player_network_switchMoveRequest.sqf', false],
+	['ExileServer_object_player_network_tagSpectateRequest', 'exile_server\code\ExileServer_object_player_network_tagSpectateRequest.sqf', false],
 	['ExileServer_object_player_network_updatePlayerIncapacitatedRequest', 'exile_server\code\ExileServer_object_player_network_updatePlayerIncapacitatedRequest.sqf', false],
 	['ExileServer_object_shippingContainer_network_smashShippingContainerRequest', 'exile_server\code\ExileServer_object_shippingContainer_network_smashShippingContainerRequest.sqf', false],
 	['ExileServer_object_supplyBox_network_attachSupplyBoxRequest', 'exile_server\code\ExileServer_object_supplyBox_network_attachSupplyBoxRequest.sqf', false],
@@ -112,8 +127,10 @@ forEach
 	['ExileServer_object_vehicle_network_rekeyVehicleRequest', 'exile_server\code\ExileServer_object_vehicle_network_rekeyVehicleRequest.sqf', false],
 	['ExileServer_object_vehicle_network_resetCodeDialogRequest', 'exile_server\code\ExileServer_object_vehicle_network_resetCodeDialogRequest.sqf', false],
 	['ExileServer_object_vehicle_network_resetCodeRequest', 'exile_server\code\ExileServer_object_vehicle_network_resetCodeRequest.sqf', false],
+	['ExileServer_object_vehicle_network_retrieveVehicleRequest', 'exile_server\code\ExileServer_object_vehicle_network_retrieveVehicleRequest.sqf', false],
 	['ExileServer_object_vehicle_network_rotateVehicleRequest', 'exile_server\code\ExileServer_object_vehicle_network_rotateVehicleRequest.sqf', false],
 	['ExileServer_object_vehicle_network_setFuelRequest', 'exile_server\code\ExileServer_object_vehicle_network_setFuelRequest.sqf', false],
+	['ExileServer_object_vehicle_network_storeVehicleRequest', 'exile_server\code\ExileServer_object_vehicle_network_storeVehicleRequest.sqf', false],
 	['ExileServer_object_vehicle_network_unlockVehicleRequest', 'exile_server\code\ExileServer_object_vehicle_network_unlockVehicleRequest.sqf', false],
 	['ExileServer_system_breaching_network_breachingCancel', 'exile_server\code\ExileServer_system_breaching_network_breachingCancel.sqf', false],
 	['ExileServer_system_breaching_network_breachingPlaceRequest', 'exile_server\code\ExileServer_system_breaching_network_breachingPlaceRequest.sqf', false],
@@ -139,17 +156,39 @@ forEach
 	['ExileServer_system_database_query_selectFull', 'exile_server\code\ExileServer_system_database_query_selectFull.sqf', false],
 	['ExileServer_system_database_query_selectSingle', 'exile_server\code\ExileServer_system_database_query_selectSingle.sqf', false],
 	['ExileServer_system_database_query_selectSingleField', 'exile_server\code\ExileServer_system_database_query_selectSingleField.sqf', false],
+	['ExileServer_system_escape_deathCheck', 'exile_server\code\ExileServer_system_escape_deathCheck.sqf', false],
+	['ExileServer_system_escape_deleteVehicles', 'exile_server\code\ExileServer_system_escape_deleteVehicles.sqf', false],
+	['ExileServer_system_escape_extractionHeli', 'exile_server\code\ExileServer_system_escape_extractionHeli.sqf', false],
+	['ExileServer_system_escape_extractionHeliHover', 'exile_server\code\ExileServer_system_escape_extractionHeliHover.sqf', false],
+	['ExileServer_system_escape_extractionHeliTakeoff', 'exile_server\code\ExileServer_system_escape_extractionHeliTakeoff.sqf', false],
+	['ExileServer_system_escape_findSafePositions', 'exile_server\code\ExileServer_system_escape_findSafePositions.sqf', false],
+	['ExileServer_system_escape_initialize', 'exile_server\code\ExileServer_system_escape_initialize.sqf', false],
+	['ExileServer_system_escape_lockServer', 'exile_server\code\ExileServer_system_escape_lockServer.sqf', false],
+	['ExileServer_system_escape_playerCountCheck', 'exile_server\code\ExileServer_system_escape_playerCountCheck.sqf', false],
+	['ExileServer_system_escape_playerStart', 'exile_server\code\ExileServer_system_escape_playerStart.sqf', false],
+	['ExileServer_system_escape_randomizeWeather', 'exile_server\code\ExileServer_system_escape_randomizeWeather.sqf', false],
+	['ExileServer_system_escape_shrinkFinalArea', 'exile_server\code\ExileServer_system_escape_shrinkFinalArea.sqf', false],
+	['ExileServer_system_escape_spawnLoot', 'exile_server\code\ExileServer_system_escape_spawnLoot.sqf', false],
+	['ExileServer_system_escape_startGame', 'exile_server\code\ExileServer_system_escape_startGame.sqf', false],
+	['ExileServer_system_escape_teleport', 'exile_server\code\ExileServer_system_escape_teleport.sqf', false],
+	['ExileServer_system_escape_updateArea', 'exile_server\code\ExileServer_system_escape_updateArea.sqf', false],
+	['ExileServer_system_escape_waitForPlayers', 'exile_server\code\ExileServer_system_escape_waitForPlayers.sqf', false],
+	['ExileServer_system_escape_weaponBoxes', 'exile_server\code\ExileServer_system_escape_weaponBoxes.sqf', false],
+	['ExileServer_system_escape_winning', 'exile_server\code\ExileServer_system_escape_winning.sqf', false],
+	['ExileServer_system_escape_3dzone_create', 'exile_server\code\ExileServer_system_escape_3dzone_create.sqf', false],
+	['ExileServer_system_escape_3dzone_destroy', 'exile_server\code\ExileServer_system_escape_3dzone_destroy.sqf', false],
+	['ExileServer_system_escape_thread_spawn', 'exile_server\code\ExileServer_system_escape_thread_spawn.sqf', false],
 	['ExileServer_system_event_initialize', 'exile_server\code\ExileServer_system_event_initialize.sqf', false],
 	['ExileServer_system_event_abandonedSafe_start', 'exile_server\code\ExileServer_system_event_abandonedSafe_start.sqf', false],
 	['ExileServer_system_event_ambientFlyOver_start', 'exile_server\code\ExileServer_system_event_ambientFlyOver_start.sqf', false],
 	['ExileServer_system_event_earthQuake_start', 'exile_server\code\ExileServer_system_event_earthQuake_start.sqf', false],
+	['ExileServer_system_event_escapeSupplyBox_start', 'exile_server\code\ExileServer_system_event_escapeSupplyBox_start.sqf', false],
 	['ExileServer_system_event_supplyBox_start', 'exile_server\code\ExileServer_system_event_supplyBox_start.sqf', false],
 	['ExileServer_system_event_thread_spawn', 'exile_server\code\ExileServer_system_event_thread_spawn.sqf', false],
 	['ExileServer_system_garbageCollector_cleanDatabase', 'exile_server\code\ExileServer_system_garbageCollector_cleanDatabase.sqf', false],
 	['ExileServer_system_garbageCollector_deleteObject', 'exile_server\code\ExileServer_system_garbageCollector_deleteObject.sqf', false],
 	['ExileServer_system_garbageCollector_start', 'exile_server\code\ExileServer_system_garbageCollector_start.sqf', false],
 	['ExileServer_system_garbageCollector_unscheduled_deleteAllDead', 'exile_server\code\ExileServer_system_garbageCollector_unscheduled_deleteAllDead.sqf', false],
-	['ExileServer_system_garbageCollector_unscheduled_deleteDeadAnimals', 'exile_server\code\ExileServer_system_garbageCollector_unscheduled_deleteDeadAnimals.sqf', false],
 	['ExileServer_system_garbageCollector_unscheduled_deleteGroundWeaponHolders', 'exile_server\code\ExileServer_system_garbageCollector_unscheduled_deleteGroundWeaponHolders.sqf', false],
 	['ExileServer_system_garbageCollector_unscheduled_deleteGroups', 'exile_server\code\ExileServer_system_garbageCollector_unscheduled_deleteGroups.sqf', false],
 	['ExileServer_system_garbageCollector_unscheduled_deleteLoot', 'exile_server\code\ExileServer_system_garbageCollector_unscheduled_deleteLoot.sqf', false],

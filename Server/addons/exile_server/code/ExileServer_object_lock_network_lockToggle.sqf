@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_paramaters","_object","_pincode","_state","_objectPinCode","_type","_accessDenied","_accessDenialExpiresAt","_numberOfFails"];
+private["_sessionID", "_paramaters", "_object", "_pincode", "_state", "_objectPinCode", "_type", "_accessDenied", "_accessDenialExpiresAt", "_numberOfFails"];
 _sessionID = _this select 0;
 _paramaters = _this select 1;
 _object = objectFromNetId (_paramaters select 0);
@@ -59,9 +59,9 @@ else
 					};
 					_object setVariable ["ExileIsLocked",0];
 				};
-				if (_object isKindOf "Exile_Container_Safe") then 
+				if (_object isKindOf "Exile_Container_Abstract_Safe") then 
 				{
-					_object animate ['DoorRotation', 1];
+					_object animateSource ['DoorAnimationSource', 1];
 				};
 				[_sessionID,"lockResponse",["Unlocked!", true , netId _object , _objectPinCode, 0]] call ExileServer_system_network_send_to;
 				_object enableRopeAttach true;
@@ -84,9 +84,9 @@ else
 					};
 					_object setVariable ["ExileIsLocked",-1];
 				};
-				if (_object isKindOf "Exile_Container_Safe") then 
+				if (_object isKindOf "Exile_Container_Abstract_Safe") then 
 				{
-					_object animate ['DoorRotation', 0];
+					_object animateSource ['DoorAnimationSource', 0];
 				};
 				[_sessionID,"lockResponse",["Locked!",true, netId _object, _objectPinCode, 2]] call ExileServer_system_network_send_to;
 				_object enableRopeAttach false;

@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_parameters","_constructionObject","_object","_requestingPlayer","_repairKitClass","_databaseId"];
+private["_sessionID", "_parameters", "_constructionObject", "_object", "_requestingPlayer", "_repairKitClass", "_databaseId", "_flag", "_lastAttackedAt", "_constructionBlockDuration"];
 _sessionID = _this select 0;
 _parameters = _this select 1;
 _constructionObject = _parameters select 0;
@@ -37,6 +37,19 @@ try
 	if(_databaseId isEqualTo -1)then
 	{
 		Throw "database ID null";
+	};
+	_flag = _constructionObject call ExileClient_util_world_getTerritoryAtPosition;
+	if !(isNull _flag) then
+	{
+		_lastAttackedAt = _flag getVariable ["ExileLastAttackAt", false];
+		if !(_lastAttackedAt isEqualTo false) then 
+		{
+			_constructionBlockDuration = getNumber (missionConfigFile >> "CfgTerritories" >> "constructionBlockDuration");
+			if (time - _lastAttackedAt < _constructionBlockDuration * 60) then
+			{
+				throw (format ["Territory has been under attack within the last %1 minutes.", _constructionBlockDuration]);
+			};
+		};
 	};
 	_constructionObject setVariable ["ExileConstructionDamage",0,true];
 	format ["updateDamage:0:%1",_databaseId] call ExileServer_system_database_query_fireAndForget;

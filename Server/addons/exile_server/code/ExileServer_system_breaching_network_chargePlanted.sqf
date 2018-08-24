@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_player","_constructionObject","_charge"];
+private["_sessionID", "_player", "_constructionObject", "_charge", "_flag"];
 _sessionID = _this select 0;
 try
 {
@@ -29,6 +29,11 @@ try
 		throw "Charge null!";
 	};
 	ExileServerBreachingCharges pushBack [_charge, _constructionObject, getPlayerUID _player];
+	_flag = _constructionObject call ExileClient_util_world_getTerritoryAtPosition;
+	if !(isNull _flag) then
+	{
+		_flag setVariable ["ExileLastAttackAt", time];
+	};
 }
 catch
 {

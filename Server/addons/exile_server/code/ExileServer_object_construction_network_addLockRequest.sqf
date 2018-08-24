@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_sessionID","_paramaters","_door","_pincode","_playerObject","_databaseID"];
+private["_sessionID", "_paramaters", "_door", "_pincode", "_playerObject", "_flag", "_lastAttackedAt", "_constructionBlockDuration", "_databaseID"];
 _sessionID = _this select 0;
 _paramaters = _this select 1;
 _door = _paramaters select 0;
@@ -36,6 +36,19 @@ try
 	if ((_door animationPhase 'DoorRotation') > 0.5) then 
 	{
 		throw "Please close the door first.";
+	};
+	_flag = _door call ExileClient_util_world_getTerritoryAtPosition;
+	if !(isNull _flag) then
+	{
+		_lastAttackedAt = _flag getVariable ["ExileLastAttackAt", false];
+		if !(_lastAttackedAt isEqualTo false) then 
+		{
+			_constructionBlockDuration = getNumber (missionConfigFile >> "CfgTerritories" >> "constructionBlockDuration");
+			if (time - _lastAttackedAt < _constructionBlockDuration * 60) then
+			{
+				throw (format ["Territory has been under attack within the last %1 minutes.", _constructionBlockDuration]);
+			};
+		};
 	};
 	_databaseID = _door getVariable ["ExileDatabaseID",0];
 	if(_databaseID isEqualTo 0) then 

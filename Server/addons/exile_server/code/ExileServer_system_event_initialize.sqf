@@ -11,8 +11,12 @@
  
 private["_events"];
 _events = getArray (configFile >> "CfgSettings" >> "Events" >> "enabledEvents");
+if (getNumber(configFile >> "CfgSettings" >> "Escape" >> "enableEscape") isEqualTo 1) then
+{
+	_events = getArray (configFile >> "CfgSettings" >> "Events" >> "enabledEscapeEvents");
+};
 {
 	missionNamespace setVariable [format ["ExileServerEvent%1LastExecutedAt", _x], 0];
 }
 forEach _events;
-[60, ExileServer_system_event_thread_spawn, [], true] call ExileServer_system_thread_addtask;
+ExileEventThreadID = [60, ExileServer_system_event_thread_spawn, [], true] call ExileServer_system_thread_addtask;

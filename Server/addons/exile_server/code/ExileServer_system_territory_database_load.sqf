@@ -9,13 +9,13 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_territoryID","_data","_id","_owner","_position","_radius","_level","_flagTexture","_flagStolen","_flagStolenBy","_lastPayed","_buildRights","_moderators","_flagObject"];
+private["_territoryID", "_data", "_id", "_owner", "_position", "_radius", "_level", "_flagTexture", "_flagStolen", "_flagStolenBy", "_lastPayed", "_buildRights", "_moderators", "_flagObject"];
 _territoryID = _this;
 _data = format ["loadTerritory:%1", _territoryID] call ExileServer_system_database_query_selectSingle;
 _id = _data select 0;
 _owner = _data select 1;
 _name = _data select 2;
-_position =
+_position = 
 [
 	_data select 3,
 	_data select 4,
@@ -30,7 +30,7 @@ _lastPayed = _data select 11;
 _buildRights = _data select 12;
 _moderators = _data select 13;
 _flagObject = createVehicle ["Exile_Construction_Flag_Static",_position, [], 0, "CAN_COLLIDE"];
-if (_flagStolen isEqualTo 0) then
+if (_flagStolen isEqualTo 0) then 
 {
 	_flagObject setFlagTexture _flagTexture;
 };
@@ -48,5 +48,9 @@ _flagObject setVariable ["ExileTerritoryNumberOfConstructions", _data select 15,
 _flagObject setVariable ["ExileRadiusShown", false, true];
 _flagObject setVariable ["ExileFlagStolen",_flagStolen,true];
 _flagObject setVariable ["ExileFlagTexture",_flagTexture];
-_flagObject enableDynamicSimulation true;
+if (getNumber(missionConfigFile >> "CfgVirtualGarage" >> "enableVirtualGarage") isEqualTo 1) then 
+{
+	_data = format["loadTerritoryVirtualGarage:%1", _territoryID] call ExileServer_system_database_query_selectFull;
+	_flagObject setVariable ["ExileTerritoryStoredVehicles", _data, true];
+};
 true

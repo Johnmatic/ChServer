@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_animal","_animalConfig","_gutItems"];
+private["_animal", "_animalConfig", "_gutItems"];
 _animal = _this select 0;
 _animalConfig = configFile >> "CfgVehicles" >> typeOf _animal >> "Exile";
 _gutItems = getArray (_animalConfig >> "gutItems");
@@ -19,4 +19,3 @@ if !(_gutItems isEqualTo []) then
 	_animal setVariable ["CanBeGutted", true, true];
 };
 _animal setVariable ["DiedAt", time];
-ExileServerDeadAnimals pushBack _animal;

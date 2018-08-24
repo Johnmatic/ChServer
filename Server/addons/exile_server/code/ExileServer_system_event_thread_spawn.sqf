@@ -9,8 +9,12 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_events","_eventKey","_config","_minTime","_maxTime","_randomTime","_lastExecutedAt","_minimumPlayersOnline","_type","_function","_functionCode"];
+private["_events", "_eventKey", "_config", "_minTime", "_maxTime", "_randomTime", "_lastExecutedAt", "_minimumPlayersOnline", "_type", "_function", "_functionCode"];
 _events = getArray (configFile >> "CfgSettings" >> "Events" >> "enabledEvents");
+if (getNumber(configFile >> "CfgSettings" >> "Escape" >> "enableEscape") isEqualTo 1) then
+{
+	_events = getArray (configFile >> "CfgSettings" >> "Events" >> "enabledEscapeEvents");
+};
 {
 	_eventKey = format ["ExileServerEvent%1LastExecutedAt", _x];
 	_config = configFile >> "CfgSettings" >> "Events" >> _x;

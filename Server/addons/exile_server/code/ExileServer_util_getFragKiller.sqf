@@ -9,7 +9,7 @@
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
  */
  
-private["_killer","_player"];
+private["_killer", "_player"];
 _killer = _this;
 _player = objNull;
 if (isPlayer _killer) then 
@@ -34,7 +34,7 @@ else
 {
 	if (isUAVConnected _killer) then 
 	{
-		_player = (UAVControl _killer) select 0;
+		_player = (UAVControl _killer) select 0; 
 	};
 };
 _player
